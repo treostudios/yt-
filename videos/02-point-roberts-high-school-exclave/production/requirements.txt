@@ -1,0 +1,8 @@
+basemap-data-hires==2.0.0
+imageio-ffmpeg==0.8.1
+numpy==2.4.6
+opencv-python-headless==5.1.0.95
+Pillow==13.0.0
+pyshp==3.1.9
+scipy==1.17.1
+Shapely==2.2.0

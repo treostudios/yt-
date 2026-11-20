@@ -1,0 +1,309 @@
+{
+  "runtime_seconds": 55,
+  "fps": 30,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "encoded_frames": 1650,
+  "crossings": [
+    {
+      "number": 1,
+      "time_sec": 7.57,
+      "nearest_frame": 227,
+      "from": "United States",
+      "to": "Canada"
+    },
+    {
+      "number": 2,
+      "time_sec": 34.02,
+      "nearest_frame": 1021,
+      "from": "Canada",
+      "to": "United States"
+    },
+    {
+      "number": 3,
+      "time_sec": 46.78,
+      "nearest_frame": 1403,
+      "from": "United States",
+      "to": "Canada"
+    },
+    {
+      "number": 4,
+      "time_sec": 48.64,
+      "nearest_frame": 1459,
+      "from": "Canada",
+      "to": "United States"
+    }
+  ],
+  "camera_keyframes": [
+    {
+      "nearest_frame": 0,
+      "longitude": -123.067,
+      "latitude": 48.993,
+      "width_km": 8.2
+    },
+    {
+      "nearest_frame": 118,
+      "longitude": -123.067,
+      "latitude": 48.994,
+      "width_km": 8.55
+    },
+    {
+      "nearest_frame": 225,
+      "longitude": -123.066,
+      "latitude": 49.0,
+      "width_km": 8.7
+    },
+    {
+      "nearest_frame": 315,
+      "longitude": -123.064,
+      "latitude": 49.0,
+      "width_km": 10.4
+    },
+    {
+      "nearest_frame": 436,
+      "longitude": -122.905,
+      "latitude": 48.98,
+      "width_km": 32.8
+    },
+    {
+      "nearest_frame": 582,
+      "longitude": -122.901,
+      "latitude": 48.981,
+      "width_km": 34.0
+    },
+    {
+      "nearest_frame": 690,
+      "longitude": -123.041,
+      "latitude": 48.99,
+      "width_km": 14.1
+    },
+    {
+      "nearest_frame": 819,
+      "longitude": -123.061,
+      "latitude": 48.992,
+      "width_km": 8.5
+    },
+    {
+      "nearest_frame": 919,
+      "longitude": -123.057,
+      "latitude": 48.994,
+      "width_km": 10.5
+    },
+    {
+      "nearest_frame": 994,
+      "longitude": -122.897,
+      "latitude": 48.982,
+      "width_km": 33.0
+    },
+    {
+      "nearest_frame": 1108,
+      "longitude": -122.756,
+      "latitude": 48.985,
+      "width_km": 13.0
+    },
+    {
+      "nearest_frame": 1257,
+      "longitude": -122.757,
+      "latitude": 48.987,
+      "width_km": 13.5
+    },
+    {
+      "nearest_frame": 1364,
+      "longitude": -122.897,
+      "latitude": 48.981,
+      "width_km": 33.2
+    },
+    {
+      "nearest_frame": 1440,
+      "longitude": -122.9,
+      "latitude": 48.982,
+      "width_km": 33.2
+    },
+    {
+      "nearest_frame": 1502,
+      "longitude": -123.055,
+      "latitude": 48.993,
+      "width_km": 12.0
+    },
+    {
+      "nearest_frame": 1579,
+      "longitude": -123.061,
+      "latitude": 48.994,
+      "width_km": 10.0
+    },
+    {
+      "nearest_frame": 1639,
+      "longitude": -123.067,
+      "latitude": 48.993,
+      "width_km": 8.2
+    },
+    {
+      "nearest_frame": 1650,
+      "longitude": -123.067,
+      "latitude": 48.993,
+      "width_km": 8.2
+    }
+  ],
+  "narration_starts_seconds": [
+    0.06,
+    6.03,
+    12.26,
+    19.99,
+    31.09,
+    42.23
+  ],
+  "late_slip_seconds": [
+    40.23,
+    42.21
+  ],
+  "route_mode": "Mapped public Point Roberts approach; country-transition schematic for unconfirmed corridor.",
+  "captions": [
+    {
+      "in_seconds": 0.0,
+      "out_seconds": 1.2,
+      "text": "This school bus"
+    },
+    {
+      "in_seconds": 1.2,
+      "out_seconds": 2.38,
+      "text": "leaves the country"
+    },
+    {
+      "in_seconds": 2.38,
+      "out_seconds": 3.82,
+      "text": "just to take kids\nto high school."
+    },
+    {
+      "in_seconds": 4.06,
+      "out_seconds": 6.0,
+      "text": "And the school is\nin the same state."
+    },
+    {
+      "in_seconds": 6.03,
+      "out_seconds": 6.94,
+      "text": "First stop:"
+    },
+    {
+      "in_seconds": 7.16,
+      "out_seconds": 8.08,
+      "text": "Canada."
+    },
+    {
+      "in_seconds": 8.18,
+      "out_seconds": 9.82,
+      "text": "That’s the only road\nout of"
+    },
+    {
+      "in_seconds": 9.82,
+      "out_seconds": 11.72,
+      "text": "Point Roberts,\nWashington."
+    },
+    {
+      "in_seconds": 12.26,
+      "out_seconds": 14.55,
+      "text": "That’s Blaine, right\nacross Boundary Bay."
+    },
+    {
+      "in_seconds": 15.23,
+      "out_seconds": 16.23,
+      "text": "It’s right there."
+    },
+    {
+      "in_seconds": 16.49,
+      "out_seconds": 17.52,
+      "text": "Unfortunately,"
+    },
+    {
+      "in_seconds": 17.58,
+      "out_seconds": 19.32,
+      "text": "the bus is not a boat."
+    },
+    {
+      "in_seconds": 19.99,
+      "out_seconds": 22.12,
+      "text": "Why is this tip\neven American?"
+    },
+    {
+      "in_seconds": 22.3,
+      "out_seconds": 24.17,
+      "text": "In 1846,"
+    },
+    {
+      "in_seconds": 24.22,
+      "out_seconds": 25.8,
+      "text": "the Oregon Treaty\nextended the border"
+    },
+    {
+      "in_seconds": 25.8,
+      "out_seconds": 28.08,
+      "text": "along the\n49th parallel."
+    },
+    {
+      "in_seconds": 28.24,
+      "out_seconds": 30.85,
+      "text": "That left the tip\non the U.S. side."
+    },
+    {
+      "in_seconds": 31.09,
+      "out_seconds": 32.94,
+      "text": "So the bus goes through\nBritish Columbia,"
+    },
+    {
+      "in_seconds": 33.02,
+      "out_seconds": 35.6,
+      "text": "crosses back into\nthe U.S. at Blaine,"
+    },
+    {
+      "in_seconds": 35.6,
+      "out_seconds": 36.9,
+      "text": "and pulls up\nto high school."
+    },
+    {
+      "in_seconds": 36.98,
+      "out_seconds": 38.94,
+      "text": "That’s about forty\nminutes on the bus."
+    },
+    {
+      "in_seconds": 39.36,
+      "out_seconds": 40.12,
+      "text": "One way."
+    },
+    {
+      "in_seconds": 42.23,
+      "out_seconds": 43.71,
+      "text": "Then the last bell rings,"
+    },
+    {
+      "in_seconds": 43.71,
+      "out_seconds": 45.46,
+      "text": "and they do it all again."
+    },
+    {
+      "in_seconds": 46.33,
+      "out_seconds": 47.4,
+      "text": "Into Canada."
+    },
+    {
+      "in_seconds": 47.78,
+      "out_seconds": 49.14,
+      "text": "Back into Washington."
+    },
+    {
+      "in_seconds": 49.28,
+      "out_seconds": 50.56,
+      "text": "Four border crossings,"
+    },
+    {
+      "in_seconds": 50.56,
+      "out_seconds": 51.77,
+      "text": "just to go to school"
+    },
+    {
+      "in_seconds": 51.77,
+      "out_seconds": 53.19,
+      "text": "in their own district."
+    }
+  ]
+}

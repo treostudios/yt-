@@ -1,0 +1,457 @@
+{
+  "episode_id": "02",
+  "slug": "point-roberts-high-school-exclave",
+  "status": "production_blueprint",
+  "width_px": 1080,
+  "height_px": 1920,
+  "fps": 30,
+  "duration_frames": 780,
+  "duration_seconds": 26,
+  "timing_notes": "Integer frames are authoritative, relative to frame 0. End frames are exclusive; frame 780 is the loop boundary, not an encoded frame. Caption anchors are scratch timings for conform to final VO. Crossing timestamps are edit cues, not real commute times.",
+  "route": {
+    "status": "complete school-bus corridor unverified",
+    "default_visual_until_confirmed": "Schematic country highlights and public campus pin; no road trace or unverified Blaine port pin.",
+    "verified_geometry_visual": "Follow road centerlines only after corridor confirmation; snap each event to its boundary intersection."
+  },
+  "thumbnail_candidate_frame": 87,
+  "beats": [
+    {
+      "id": "hook",
+      "in_frame": 0,
+      "out_frame": 108,
+      "in_tc": "00:00:00",
+      "out_tc": "00:03:18",
+      "vo": "This school bus crosses an international border four times a day.",
+      "camera": [
+        {
+          "frame": 0,
+          "ortho_width_km_approx": 5,
+          "anchor": "Point Roberts crossing"
+        },
+        {
+          "frame": 108,
+          "ortho_width_km_approx": 7,
+          "anchor": "Point Roberts peninsula"
+        }
+      ],
+      "captions": [
+        {
+          "in_frame": 0,
+          "out_frame": 36,
+          "text": "This school bus crosses"
+        },
+        {
+          "in_frame": 36,
+          "out_frame": 74,
+          "text": "an international border"
+        },
+        {
+          "in_frame": 74,
+          "out_frame": 108,
+          "text": "four times a day."
+        }
+      ],
+      "sfx": [
+        {
+          "frame": 0,
+          "cue": "rolling_bed",
+          "direction": "Tire and engine bed; wrap across seam."
+        },
+        {
+          "frame": 77,
+          "cue": "emphasis_tick",
+          "direction": "Soft, unnumbered tick under FOUR."
+        }
+      ],
+      "crossings": [],
+      "visual_markers": [
+        {
+          "frame": 0,
+          "cue": "Bus rolling on U.S. approach; POINT ROBERTS, WA and CANADA visible; no crossing counted"
+        }
+      ]
+    },
+    {
+      "id": "same_state",
+      "in_frame": 108,
+      "out_frame": 180,
+      "in_tc": "00:03:18",
+      "out_tc": "00:06:00",
+      "vo": "And the school is in the same state.",
+      "camera": [
+        {
+          "frame": 108,
+          "ortho_width_km_approx": 7,
+          "anchor": "Point Roberts peninsula"
+        },
+        {
+          "frame": 174,
+          "ortho_width_km_approx": 32,
+          "anchor": "Boundary Bay with both endpoints"
+        }
+      ],
+      "captions": [
+        {
+          "in_frame": 108,
+          "out_frame": 146,
+          "text": "And the school is"
+        },
+        {
+          "in_frame": 146,
+          "out_frame": 178,
+          "text": "in the same state."
+        }
+      ],
+      "sfx": [
+        {
+          "frame": 111,
+          "cue": "widen_whoosh",
+          "direction": "Soft, no tonal rise above voice."
+        },
+        {
+          "frame": 158,
+          "cue": "same_state_tone",
+          "direction": "Muted single note; both WA pins lit."
+        }
+      ],
+      "crossings": [],
+      "visual_markers": [
+        {
+          "frame": 153,
+          "cue": "Light Point Roberts and Blaine pins in matching Washington sand"
+        }
+      ]
+    },
+    {
+      "id": "treaty",
+      "in_frame": 180,
+      "out_frame": 321,
+      "in_tc": "00:06:00",
+      "out_tc": "00:10:21",
+      "vo": "In 1846, the Oregon Treaty extended the border along the forty-ninth parallel.",
+      "camera": [
+        {
+          "frame": 180,
+          "ortho_width_km_approx": 32,
+          "anchor": "Boundary Bay with both endpoints"
+        }
+      ],
+      "captions": [
+        {
+          "in_frame": 180,
+          "out_frame": 216,
+          "text": "In 1846,"
+        },
+        {
+          "in_frame": 216,
+          "out_frame": 255,
+          "text": "the Oregon Treaty"
+        },
+        {
+          "in_frame": 255,
+          "out_frame": 291,
+          "text": "extended the border"
+        },
+        {
+          "in_frame": 291,
+          "out_frame": 321,
+          "text": "along the 49th parallel."
+        }
+      ],
+      "sfx": [
+        {
+          "frame": 225,
+          "cue": "pencil_trace",
+          "direction": "Quiet pencil texture at start of the boundary reveal."
+        },
+        {
+          "frame": 315,
+          "cue": "dry_map_stamp",
+          "direction": "Soft paper impact on line settle; not a passport stamp."
+        }
+      ],
+      "crossings": [],
+      "visual_markers": [
+        {
+          "frame": 216,
+          "cue": "Show 1846 · OREGON TREATY"
+        },
+        {
+          "frame": 225,
+          "cue": "Begin east-to-west IBC land-boundary trace"
+        },
+        {
+          "frame": 291,
+          "cue": "Reveal historical label 49° N"
+        },
+        {
+          "frame": 315,
+          "cue": "Land trace settles; retain separate maritime geometry"
+        }
+      ]
+    },
+    {
+      "id": "exclave",
+      "in_frame": 321,
+      "out_frame": 420,
+      "in_tc": "00:10:21",
+      "out_tc": "00:14:00",
+      "vo": "That put the tip of this peninsula in Washington.",
+      "camera": [
+        {
+          "frame": 321,
+          "ortho_width_km_approx": 32,
+          "anchor": "Boundary Bay with both endpoints"
+        },
+        {
+          "frame": 405,
+          "ortho_width_km_approx": 9,
+          "anchor": "Point Roberts peninsula"
+        }
+      ],
+      "captions": [
+        {
+          "in_frame": 321,
+          "out_frame": 373,
+          "text": "That put the tip\nof this peninsula"
+        },
+        {
+          "in_frame": 373,
+          "out_frame": 419,
+          "text": "in Washington."
+        }
+      ],
+      "sfx": [
+        {
+          "frame": 329,
+          "cue": "shading_swell",
+          "direction": "Small, soft fill swell under VO."
+        }
+      ],
+      "crossings": [],
+      "visual_markers": [
+        {
+          "frame": 329,
+          "cue": "Highlight only U.S. land on peninsula"
+        },
+        {
+          "frame": 373,
+          "cue": "POINT ROBERTS, WA label back; brief U.S. flag-card glance"
+        },
+        {
+          "frame": 414,
+          "cue": "Flag card cleared"
+        }
+      ]
+    },
+    {
+      "id": "outbound",
+      "in_frame": 420,
+      "out_frame": 600,
+      "in_tc": "00:14:00",
+      "out_tc": "00:20:00",
+      "vo": "From Point Roberts, the bus goes into Canada, then back into the U.S. at Blaine.",
+      "camera": [
+        {
+          "frame": 420,
+          "ortho_width_km_approx": 9,
+          "anchor": "Point Roberts peninsula"
+        },
+        {
+          "frame": 483,
+          "ortho_width_km_approx": 31,
+          "anchor": "Boundary Bay with both endpoints"
+        },
+        {
+          "frame": 591,
+          "ortho_width_km_approx": 31,
+          "anchor": "Boundary Bay with both endpoints; bias east"
+        }
+      ],
+      "captions": [
+        {
+          "in_frame": 420,
+          "out_frame": 453,
+          "text": "From Point Roberts,"
+        },
+        {
+          "in_frame": 453,
+          "out_frame": 506,
+          "text": "the bus goes into Canada,"
+        },
+        {
+          "in_frame": 506,
+          "out_frame": 544,
+          "text": "then back into the U.S."
+        },
+        {
+          "in_frame": 544,
+          "out_frame": 586,
+          "text": "at Blaine."
+        }
+      ],
+      "sfx": [
+        {
+          "frame": 492,
+          "cue": "crossing_tick",
+          "direction": "First border tick."
+        },
+        {
+          "frame": 543,
+          "cue": "crossing_tick",
+          "direction": "Second border tick."
+        },
+        {
+          "frame": 591,
+          "cue": "bell_partial",
+          "direction": "Subtle school bell tone, no ringing tail."
+        }
+      ],
+      "crossings": [
+        {
+          "frame": 492,
+          "count": 1,
+          "leg": "outbound",
+          "from": "USA",
+          "to": "CAN",
+          "confirmed_port": "Boundary Bay"
+        },
+        {
+          "frame": 543,
+          "count": 2,
+          "leg": "outbound",
+          "from": "CAN",
+          "to": "USA",
+          "confirmed_port": null
+        }
+      ],
+      "visual_markers": [
+        {
+          "frame": 591,
+          "cue": "Blaine High School campus arrival"
+        }
+      ]
+    },
+    {
+      "id": "return",
+      "in_frame": 600,
+      "out_frame": 705,
+      "in_tc": "00:20:00",
+      "out_tc": "00:23:15",
+      "vo": "After school? Same trip in reverse.",
+      "camera": [
+        {
+          "frame": 600,
+          "ortho_width_km_approx": 31,
+          "anchor": "Boundary Bay with both endpoints; bias east"
+        },
+        {
+          "frame": 705,
+          "ortho_width_km_approx": 31,
+          "anchor": "Boundary Bay with both endpoints; bias west"
+        }
+      ],
+      "captions": [
+        {
+          "in_frame": 600,
+          "out_frame": 630,
+          "text": "After school?"
+        },
+        {
+          "in_frame": 630,
+          "out_frame": 689,
+          "text": "Same trip in reverse."
+        }
+      ],
+      "sfx": [
+        {
+          "frame": 627,
+          "cue": "crossing_tick",
+          "direction": "Third border tick."
+        },
+        {
+          "frame": 681,
+          "cue": "crossing_tick",
+          "direction": "Fourth border tick."
+        }
+      ],
+      "crossings": [
+        {
+          "frame": 627,
+          "count": 3,
+          "leg": "return",
+          "from": "USA",
+          "to": "CAN",
+          "confirmed_port": null
+        },
+        {
+          "frame": 681,
+          "count": 4,
+          "leg": "return",
+          "from": "CAN",
+          "to": "USA",
+          "confirmed_port": "Boundary Bay"
+        }
+      ],
+      "visual_markers": [
+        {
+          "frame": 600,
+          "cue": "Dim outbound and start reversed direction; schematic mode keeps only country/endpoint highlights"
+        },
+        {
+          "frame": 681,
+          "cue": "Land crossing count 4 at Boundary Bay"
+        }
+      ]
+    },
+    {
+      "id": "loop",
+      "in_frame": 705,
+      "out_frame": 780,
+      "in_tc": "00:23:15",
+      "out_tc": "00:26:00",
+      "vo": "All for a school in Washington.",
+      "camera": [
+        {
+          "frame": 705,
+          "ortho_width_km_approx": 31,
+          "anchor": "Boundary Bay with both endpoints; bias west"
+        },
+        {
+          "frame": 774,
+          "ortho_width_km_approx": 5,
+          "anchor": "Point Roberts crossing; match opening rig and motion"
+        },
+        {
+          "frame": 780,
+          "ortho_width_km_approx": 5,
+          "anchor": "Loop boundary sample; equals opening rig pose, then motion continues"
+        }
+      ],
+      "captions": [
+        {
+          "in_frame": 705,
+          "out_frame": 743,
+          "text": "All for a school"
+        },
+        {
+          "in_frame": 743,
+          "out_frame": 774,
+          "text": "in Washington."
+        }
+      ],
+      "sfx": [],
+      "crossings": [],
+      "visual_markers": [
+        {
+          "frame": 735,
+          "cue": "Return marker fade complete; bus-body match wipe into next school day"
+        },
+        {
+          "frame": 774,
+          "cue": "Closing caption cleared; bed continuous to frame zero"
+        }
+      ]
+    }
+  ]
+}
