@@ -59,8 +59,8 @@ def life(f,a,b,r=9): return min(fade(f,a,a+r),1-fade(f,b-r,b))
 def bgr(color): return v1.rgb(color)[::-1]
 
 
-def camera():
-    a=np.array(KEYS,dtype=float); t=a[:,0]; y=a[:,1:].copy(); y[:,0]=np.log(y[:,0]); vel=PchipInterpolator(t,y).derivative()(t)
+def camera(keys=KEYS):
+    a=np.array(keys,dtype=float); t=a[:,0]; y=a[:,1:].copy(); y[:,0]=np.log(y[:,0]); vel=PchipInterpolator(t,y).derivative()(t)
     # Set the same near-seam derivative at the first/last sample.
     vel[[0,-1]]=0
     return CubicHermiteSpline(t,y,vel)
@@ -120,13 +120,15 @@ def roads(raw, ids, backwards=()):
 
 
 class Route:
-    def __init__(self,ll):
+    def __init__(self,ll,expected=1):
         self.ll=LineString(ll); path=v1.grid(ll); self.path=path
         self.s=np.r_[0,np.cumsum(np.linalg.norm(np.diff(path,axis=0),axis=1))]; self.end=self.s[-1]
         hit=self.ll.intersection(LineString(BORDER_LL))
-        if hit.geom_type!='Point': raise ValueError(f'Expected one public approach intersection, got {hit.geom_type}')
-        self.hit=v1.xy(hit.x,hit.y)
-        self.hit_s=LineString(path).project(Point(self.hit))
+        hits=[hit] if hit.geom_type=='Point' else (list(hit.geoms) if hit.geom_type=='MultiPoint' else [])
+        if len(hits)!=expected: raise ValueError(f'Expected {expected} road intersections, got {hit.wkt}')
+        chain=LineString(path)
+        self.crossings=sorted((chain.project(Point(v1.xy(p.x,p.y))),v1.xy(p.x,p.y)) for p in hits)
+        self.hit_s,self.hit=self.crossings[0]
     def at(self,d):
         return np.array([np.interp(d,self.s,self.path[:,i]) for i in range(2)])
     def span(self,a,b):
@@ -233,7 +235,7 @@ fall=np.clip((y_grid-741)/440,0,.94)
 GRADE=np.ascontiguousarray(np.broadcast_to((edge*(1-fall*.87))[:,:,None],(H,W,3)).astype(np.float32))
 
 
-def render_engine():
+def render_engine(example_route=False):
     tex,_,_,_=v1.render_map(); view=overview(); land,us,local,dems=v1.read_assets()
     height=heightfield(land,dems)
     # Territory masks remain geometric and share the camera transform.
@@ -249,7 +251,11 @@ def render_engine():
     outline=[v1.grid(x.coords) for x in lines(land.boundary.intersection(box(-123.052,48.929,-122.778,49.05))) if x.length>.016]
     out=Route(roads(local['roads'],[241,826,13,478,479,471],(241,826)))
     home=Route(roads(local['roads'],[232,462,452]))
-    solve=camera()
+    route_state=None
+    if example_route:
+        from v3_graphics import Director
+        route_state=Director(land)
+    solve=camera(route_state.keys) if route_state else camera()
     rq=PchipInterpolator([42,91,180,205,227,248,274],[0,out.hit_s*.17,out.hit_s*.53,out.hit_s*.82,out.hit_s,out.end*.99,out.end])
     hq=PchipInterpolator([1429,1445,1459,1495],[0,home.hit_s*.64,home.hit_s,home.end])
     pos={key:np.array(v1.xy(*ll)) for key,ll in [('point',POINT),('school',SCHOOL),('city',BLAINE),('bay',BAY),('bc',BC),('port',v1.PORT)]}
@@ -303,7 +309,7 @@ def render_engine():
         afternoon=life(fno,1267,1618,42)
         if afternoon>.01:
             cv2.addWeighted(frame,1,frame,0,afternoon*2,frame)
-        p={a:project(b) for a,b in pos.items()}; exact1=project(out.hit); exact4=project(home.hit)
+        p={a:project(b) for a,b in pos.items()}; exact1=project(out.hit); exact4=project(route_state.crossings[3] if route_state else home.hit)
         def tx(s,x,y,size=26,weight=790,fill=PALE,stroke=1,alpha=1):
             v1.paste(frame,v1.label(s,size,weight,fill,stroke,'',9),x,y,alpha)
         def marker(at, name, off=(0,49), alpha=1, num=None, highlight=GOLD):
@@ -351,7 +357,7 @@ def render_engine():
                 q=max(1-fade(fno,38,60),fade(fno,1625,1646))
                 v1.paste(frame,bus(0,62),anchor[0],anchor[1]-19,q)
                 tx('POINT ROBERTS, WA',anchor[0],anchor[1]+54,20,820,PALE,2,q)
-        if 39<fno<277:
+        if not route_state and 39<fno<277:
             d=float(rq(np.clip(fno,42,274))); off=life(fno,37,277,10)
             # Dim remaining road ahead; the amber reveal head is the same world sample as the axle.
             drawline(frame,project(out.path),INK,8,off*.9)
@@ -363,7 +369,7 @@ def render_engine():
                 size=76 if wide<12 else 53; angle=round(-math.degrees(math.atan2(v[0],-v[1]))/5)*5
                 center=a-v/norm*(size*.25)
                 v1.paste(frame,bus(angle,size),*center,off)
-        if 1429<=fno<1505:
+        if not route_state and 1429<=fno<1505:
             d=float(hq(np.clip(fno,1429,1495))); off=life(fno,1429,1505,9)
             drawline(frame,project(home.path),INK,8,off*.85); drawline(frame,project(home.span(0,d)),GOLD,4,off)
             a=project(home.at(d)); v=project(home.at(min(home.end,d+5)))-project(home.at(max(0,d-5)))
@@ -380,33 +386,34 @@ def render_engine():
         # Retain readable labels through yaw/zoom; only one water contour at a time.
         q=life(fno,405,593,16)
         if q>.02:
-            tx('B O U N D A R Y   B A Y',p['bay'][0],p['bay'][1]+37,19,780,COOL,2,q)
+            tx('B O U N D A R Y   B A Y',p['bay'][0],p['bay'][1]+(160 if route_state else 37),19,780,COOL,2,q*(.62 if route_state else 1))
             if 416<=fno<469:
                 for line in outline:
                     drawline(frame,project(line),'#83c6c6',2,q*.5*(1-fade(fno,443,469)))
         event_ring(frame,p['city'],False,fno-467,GOLD)
-        if 184<fno<305:
+        if not route_state and 184<fno<305:
             marker(exact1,'BOUNDARY BAY PORT' if fno<CROSS[0] else 'ENTER CANADA',(-103,-63),life(fno,184,305,13), '01' if fno>=CROSS[0] else None,COOL)
-        event_ring(frame,exact1,True,fno-CROSS[0],COOL)
+        if not route_state: event_ring(frame,exact1,True,fno-CROSS[0],COOL)
         if 230<fno<273:
             q=life(fno,230,273,11); v1.paste(frame,v1.flag('CA',248<=fno<252),mix(-70,np.clip(exact1[0]-154,80,575),fade(fno,230,242)),exact1[1]-122,q)
-        if 247<fno<326:
+        if not route_state and 247<fno<326:
             marker(project(out.at(out.hit_s*.28)),'TYEE DRIVE / 56 STREET',(100,57),life(fno,247,326,12),None,GOLD)
         if 511<fno<572:
             q=life(fno,511,572,12); v1.paste(frame,v1.flag('US',547<=fno<551),mix(800,np.clip(p['city'][0]-43,170,623),fade(fno,511,525)),p['city'][1]-96,q)
         if 660<fno<769:
             op=life(fno,660,769,14); tx('1846',350,241,85,850,GOLD,2,op); tx('THE OREGON TREATY',350,321,27,850,PALE,2,op)
-        if 942<fno<1069:
+        if not route_state and 942<fno<1069:
             q=life(fno,942,1069,13); point=p['bc']
             if fno<1021: marker(point,'BRITISH COLUMBIA',(55,-34),q,None,COOL)
             else: area(p['city'],'BACK INTO THE U.S.','02',q,GOLD)
             tx('ROUTE SHOWN SCHEMATICALLY',350,1025,16,820,COOL,2,q)
-        if 1354<fno<1446:
+        if not route_state and 1354<fno<1446:
             q=life(fno,1354,1446,11)
             if 1404<=fno: area(p['bc'],'INTO CANADA','03',q,COOL)
             tx('ROUTE SHOWN SCHEMATICALLY',350,1025,16,820,COOL,2,q)
-        event_ring(frame,exact4,True,fno-CROSS[3],GOLD)
-        if 1459<=fno<1517: marker(exact4,'BACK INTO WASHINGTON',(-77,-54),life(fno,1459,1517,9),'04')
+        if not route_state: event_ring(frame,exact4,True,fno-CROSS[3],GOLD)
+        if not route_state and 1459<=fno<1517: marker(exact4,'BACK INTO WASHINGTON',(-77,-54),life(fno,1459,1517,9),'04')
+        if route_state: route_state.paint(frame,fno,project,wide,marker,tx)
         if 1110<fno<1220:
             q=life(fno,1110,1220,14); p1=p['school']; cy1=np.clip(p1[1]+170,558,757)
             drawline(frame,[p1,(350,cy1-52)],GOLD,2,q*.7)
@@ -432,28 +439,28 @@ def render_engine():
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--samples',action='store_true');args=parser.parse_args()
-    scene=render_engine()
+    parser=argparse.ArgumentParser();parser.add_argument('--samples',action='store_true');parser.add_argument('--v3',action='store_true');args=parser.parse_args()
+    scene=render_engine(example_route=args.v3)
     if args.samples:
-        nums=(0,64,160,227,416,547,679,840,1000,1097,1183,1233,1409,1459,1536,1649)
+        nums=(0,64,160,239,414,557,679,840,976,1032,1097,1233,1412,1440,1468,1545)
         canvas=Image.new('RGB',(216*4,384*4))
         for i,k in enumerate(nums):
             f=scene(k); cv2.imwrite(str(v1.DATA/f'v2-{k:04}.jpg'),f)
             canvas.paste(Image.fromarray(cv2.resize(f,(216,384))[:,:,::-1]),((i%4)*216,(i//4)*384))
-        canvas.save(v1.DATA/'v2-board.jpg');return
+        canvas.save(v1.DATA/('v3-board.jpg' if args.v3 else 'v2-board.jpg'));return
     # Reuse isolated dialogue; the mixed crossings and late-slip paper now conform to V2 marks.
     mix_path=v1.DATA/'v2-mix.wav'
     v1.make_audio(mix_path, crossings=[i/FPS for i in CROSS],
                   whooshes=[(.14,.86),(3.83,1.05),(10.9,.9),(19.55,.74),(30.96,.66),(44.65,.73),(53.50,.68)],
                   line_hit=880/FPS,paper=1207/FPS,bell=1268/FPS)
 
-    tmp=v1.DATA/'v2-video-tmp.mp4'; dest=v1.ROOT/'final_short_v2.mp4'
+    tmp=v1.DATA/'video-tmp.mp4'; dest=v1.ROOT/('final_short_v3.mp4' if args.v3 else 'final_short_v2.mp4')
     args=[v1.FFMPEG,'-y','-hide_banner','-loglevel','error','-f','rawvideo','-pixel_format','bgr24','-video_size',f'{W}x{H}',
           '-framerate',str(FPS),'-i','-','-i',str(mix_path),'-filter_threads','1','-vf','scale=1080:1920:flags=lanczos:out_color_matrix=bt709,setsar=1',
           '-af','loudnorm=I=-14:TP=-1.3:LRA=8,aresample=48000','-c:v','libx264','-threads','2','-preset','veryfast','-profile:v','high',
           '-crf','18','-pix_fmt','yuv420p','-color_primaries','bt709','-color_trc','bt709','-colorspace','bt709','-c:a','aac','-b:a','256k',
           '-bsf:v','h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1',
-          '-movflags','+faststart','-metadata','title=The Border Bus (V2)','-t','55',str(tmp)]
+          '-movflags','+faststart','-metadata','title=The Border Bus (V3)' if args.v3 else 'title=The Border Bus (V2)','-t','55',str(tmp)]
     with subprocess.Popen(args,stdin=subprocess.PIPE) as enc:
         for i in range(N):
             enc.stdin.write(scene(i).tobytes())

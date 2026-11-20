@@ -1,5 +1,9 @@
 # Point Roberts · final production handoff
 
+## V3 master
+
+- [Final V3 Short](../final_short_v3.mp4) · [V3 scene-by-scene execution and provenance](v3_motion_and_source_notes.md) · [V3 thumbnail frame](../thumbnail_frame_v3.jpg). V3 uses direction-specific example driving geometry on real roads and a separate dashed shore-to-shore measurement. It does not claim the school's exact route or depict an active ferry. Rebuild with `python "$D/render_v2.py" --v3` using the shared setup below.
+
 ## V2 master
 
 - [Final V2 Short](../final_short_v2.mp4) · 55 seconds, 1080 × 1920 delivery, 30 fps CFR, Rec.709, H.264/AAC, full decode of 1,650 frames. Measured V2 audio: −14.1 LUFS integrated, −1.3 dBTP. [V2 thumbnail frame](../thumbnail_frame_v2.jpg) at ~00:02.13; the same [caption transcript](../final_captions.srt) is burned into V2.
