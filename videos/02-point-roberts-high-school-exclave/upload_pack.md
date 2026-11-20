@@ -1,5 +1,7 @@
 # 02 · Upload pack
 
+**For the final 50.35-second upload:** Use the [credited upload copy](final_short_publish.mp4), [captions](final_captions_v5.srt), and [thumbnail reference](thumbnail_frame_final.jpg). Keep the route disclosure and full data credits in the description. The [clean master](final_short_master.mp4) is for editorial use.
+
 **For the 50.35-second V5 master:** Use [the final video](final_short_v5.mp4), [V5 captions](final_captions_v5.srt), and the [road-level thumbnail reference near 00:01.52](thumbnail_frame_v5.jpg). Keep the illustrative-route disclosure below. At this cut length, 120% APV means about 60.42 seconds average view duration.
 
 **For the 50-second V4 master:** Use [the final video](final_short_v4.mp4), [V4 captions](final_captions_v4.srt), and the [thumbnail reference around 00:06.18](thumbnail_frame_v4.jpg). The public-road drive is illustrative; add: “The map follows an example public route, not a verified district bus itinerary. The dashed span measures shore to shore, not a ferry route.” At this cut length, 120% APV means 60 seconds average view duration.
@@ -21,7 +23,9 @@ Point Roberts and Blaine are both in Washington. But the road between them goes 
 
 The Oregon Treaty of 1846 extended the border along the 49th parallel, leaving the tip of this peninsula on the U.S. side of the line.
 
-Sources: Oregon Treaty text (Article I), Blaine School District, and the All Point Bulletin’s reporting on Point Roberts students. Map credits: © OpenStreetMap contributors (openstreetmap.org/copyright); Natural Earth; GSHHG (Wessel & Smith); NOAA NCEI CUDEM; GMRT Synthesis (Ryan et al. 2009, CC BY 4.0, shaded and resampled).
+Sources: Oregon Treaty text (Article I), Blaine School District, and the All Point Bulletin’s reporting on Point Roberts students. Map credits: © OpenStreetMap contributors (https://www.openstreetmap.org/copyright, ODbL); Natural Earth; GSHHG (Wessel & Smith); NOAA NCEI CUDEM; GMRT Synthesis (Ryan et al. 2009, CC BY 4.0, shaded and resampled; https://www.gmrt.org/about/terms_of_use.php).
+
+For the final upload, add: “The map follows an example public route, not a verified district bus itinerary. The dashed span measures shore to shore, not a ferry route.”
 
 If using the schematic edit, add: “The map shows the sequence of border crossings, not the school bus’s exact route.”
 

@@ -1,5 +1,9 @@
 # Point Roberts · final production handoff
 
+## Final finishing master
+
+- [Clean master](../final_short_master.mp4) · [Credited upload copy](../final_short_publish.mp4) · [Final release notes](final_master_notes.md). Layered evergreen geometry, a same-voice pronunciation pickup, and clean bookends.
+
 ## V5 master
 
 - [Final V5 Short](../final_short_v5.mp4) · [Rendered handoff](v5_release_notes.md) · [Conformed cues](v5_conformed_cues.json) · [Choreography blueprint](v5_motion_blueprint.md). The perspective street opener, isolated territorial accents and resolved loop are rendered with the same narrator identity.

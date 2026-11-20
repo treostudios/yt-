@@ -31,6 +31,7 @@ def polygons(g):
 
 class Director(Base):
     frames=F; frame_count=N; custom_bookends=True
+    street_renderer=staticmethod(street)
     def caption_rows(self): return captions()
     def __init__(self,land,us,treaty):
         super().__init__(land,us,treaty)
@@ -119,7 +120,7 @@ class Director(Base):
                 v1.paste(im,bus(angle,size),*a, max(.14,m))
                 if i>=t['canada'] and i<t['point']:tx('WASHINGTON → CANADA → WASHINGTON',350,279,20,840,PALE,2)
             if m<.999:
-                ref=np.clip(a,[230,330],[480,710]); scene=street(street_i,align=ref,lift=l)
+                ref=np.clip(a,[230,330],[480,710]); scene=self.street_renderer(street_i,align=ref,lift=l)
                 if m<=.001:np.copyto(im,scene)
                 else:cv2.addWeighted(im,m,scene,1-m,0,im)
         return super().paint(im,i,proj,wide,marker,tx,p)

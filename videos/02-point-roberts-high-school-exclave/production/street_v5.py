@@ -100,7 +100,7 @@ def bus_geometry(s):
     return faces
 
 
-def render(frame, *, align=None, lift=0):
+def render(frame, *, align=None, lift=0, scenery_factory=scenery):
     """frame is continuous through zero at the loop; align can steer the lift target."""
     t=frame/60.; s=t*10.5  # ~24 mph while photographed at street scale
     u=sm((frame+4)/69); q=sm(lift)
@@ -139,7 +139,7 @@ def render(frame, *, align=None, lift=0):
             elif c!='texture':
                 col=np.array(b(c)); fog=np.clip((z-50)/480,0,.32);col=tuple((col*(1-fog)+np.array(b('a5af9d'))*fog).astype(int).tolist())
                 cv2.fillConvexPoly(im,np.round(p).astype('i'),col,cv2.LINE_AA)
-    base=scenery()
+    base=scenery_factory()
     paint(visible(base[:3])); paint(sorted(visible(base[3:]),key=lambda x:-x[0]))
     shadow=np.array([(.28,s-6.0,.03),(3.3,s-6.5,.03),(3.85,s+4,.03),(.85,s+5.6,.03)])
     sh=list(visible([(shadow,'273c41')]))

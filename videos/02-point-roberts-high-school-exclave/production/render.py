@@ -510,7 +510,7 @@ def render_frames():
     return frame_at
 
 
-def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.27, bell=42.32, dialogue=None, length=None, clicks=(), loop_street=None):
+def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.27, bell=42.32, dialogue=None, length=None, clicks=(), loop_street=None, clip_gains=None):
     sr=48000; length=LEN if length is None else length; n=round(sr*length); t=np.arange(n)/sr
     vo=np.zeros(n,np.float32)
     for path,at in ([(VOICE/(clip+'.flac'),at) for clip,at in CLIPS] if dialogue is None else dialogue):
@@ -519,6 +519,7 @@ def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.2
         a=np.frombuffer(buf,dtype='<f4').copy()
         st=round(at*sr); a=a[:min(n-st,len(a))]
         active=a[np.abs(a)>.010]; gain=.126/max(.021,np.sqrt(np.mean(active**2)))
+        if clip_gains and path in clip_gains: gain=clip_gains[path]
         a[:200]*=np.linspace(0,1,200); a[-450:]*=np.linspace(1,0,450)
         vo[st:st+len(a)]+=a*gain
     rng=np.random.default_rng(44520)

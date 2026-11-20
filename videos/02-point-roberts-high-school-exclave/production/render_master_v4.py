@@ -55,6 +55,7 @@ class Director:
     frames=F
     frame_count=N
     custom_bookends=False
+    bookend_credits=True
     def caption_rows(self): return caption_data()
 
     def __init__(self,land,us,treaty):
@@ -209,7 +210,7 @@ class Director:
                 tx('WASHINGTON → CANADA → WASHINGTON',350,361,20,840,COOL,2)
             elif i<t['same']:tx('CANADA',350,318,37,850,COOL,3);pop(proj(self.out.crossings[0][1]),'canada',COOL)
         if not self.custom_bookends or not opening: tx('ODD STATE OUT  /  02',350,139,16,840,COOL,1)
-        if opening:tx('© OpenStreetMap contributors · GSHHG · NOAA · GMRT',349,1090,13,770,COOL,1)
+        if opening and self.bookend_credits:tx('© OpenStreetMap contributors · GSHHG · NOAA · GMRT',349,1090,13,770,COOL,1)
         for a,b,s in reversed(self.captions):
             if a<=i<b:
                 settings=s.splitlines(); yy=889 if len(settings)==2 else 921
