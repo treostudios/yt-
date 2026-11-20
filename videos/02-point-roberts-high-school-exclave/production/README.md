@@ -1,8 +1,8 @@
 # Point Roberts · final production handoff
 
-## V5 production plan (not rendered)
+## V5 master
 
-- [Opening, territories and loop choreography](v5_motion_blueprint.md) · [Updated locked script](v5_master_script.txt) · [60 fps cue targets](v5_motion_cues.json). V5 keeps `voice-01`; the last sentence is queued for a matching pickup. V4 remains the latest rendered master.
+- [Final V5 Short](../final_short_v5.mp4) · [Rendered handoff](v5_release_notes.md) · [Conformed cues](v5_conformed_cues.json) · [Choreography blueprint](v5_motion_blueprint.md). The perspective street opener, isolated territorial accents and resolved loop are rendered with the same narrator identity.
 
 ## V4 master · operator's polished script
 

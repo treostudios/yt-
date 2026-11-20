@@ -52,7 +52,13 @@ def caption_data():
     return result
 
 class Director:
+    frames=F
+    frame_count=N
+    custom_bookends=False
+    def caption_rows(self): return caption_data()
+
     def __init__(self,land,us,treaty):
+        F,N=self.frames,self.frame_count
         self.out=Route(decode('outbound'),expected=2); self.home=Route(decode('homebound'),expected=2)
         self.treaty=treaty
         p=us.intersection(box(-123.103,48.95,-123.018,49.00212)); self.tip=[v1.grid(l.coords) for l in lines(p.boundary) if l.length>.025]
@@ -80,12 +86,12 @@ class Director:
           (F['cross4'],8,20,-123.065,49.002,-4),(F['four']+13,33,12,-122.902,48.987,0),
           (F['standard']-12,14,18,-123.049,48.990,-3),(F['yellow']+11,*openview),(N,*openview)]
         self.keys.sort()
-        self.captions=caption_data()
+        self.captions=self.caption_rows()
         for (f,w,_),(s,p) in zip(self.hits,[*self.out.crossings,*self.home.crossings]):
             assert abs(float((self.o if f in [F['cross1'],F['cross2']] else self.h)(f))-s)<.0001
 
     def paint(self,im,i,proj,wide,marker,tx,p):
-        t=F
+        t=self.frames; N=self.frame_count
         def hit(k,a=30):
             age=i-t[k];return math.exp(-age/a) if 0<=age<a*4 else 0
         def pop(at,k,color=GOLD):
@@ -112,17 +118,17 @@ class Director:
             if not (drive1 or drive2):
                 progress=.012+.988*fade(i,t['no'],t['why']-9)
                 drawline(im,proj(rr.span(0,rr.end*progress)),GOLD,3,.85)
-        if t['here']<=i<t['here']+65:
+        if not self.custom_bookends and t['here']<=i<t['here']+65:
             a=proj(self.treaty.path); age=i-t['here']; z=math.exp(-age/46)
             drawline(im,a,'#75f6e8',17,.37*z); drawline(im,a,'#edfdf8',4,z)
             pop(p['point'],'here',COOL)
             marker(p['point'],'POINT ROBERTS, WA',(45,72),z,None,COOL)
             card('48.986° N  ·  123.061° W',350,757,COOL)
-        if t['same']<=i<t['point']+6:
+        if not self.custom_bookends and t['same']<=i<t['point']+6:
             marker(p['point'],'POINT ROBERTS, WA',(32,55),1,None,GOLD)
             marker(p['school'],'BLAINE HIGH SCHOOL',(-72,52),1,None,GOLD)
             pop(p['point'],'same');pop(p['school'],'same')
-        if t['there']<=i<t['why']:
+        if not self.custom_bookends and t['there']<=i<t['why']:
             marker(p['school'],'BLAINE HIGH SCHOOL',(-75,-69),1,None,GOLD)
             pop(p['school'],'there')
         if t['eleven']<=i<t['why']+5:
@@ -192,7 +198,7 @@ class Director:
                     cv2.fillPoly(im,[star],v1.rgb(INK)[::-1],lineType=cv2.LINE_AA)
         if t['four']<=i<t['standard']-12:
             tx('4 BORDER CROSSINGS',350,695,36,880,GOLD,3);tx('PER SCHOOL DAY',350,739,19,840,PALE,2)
-        if opening:
+        if opening and not self.custom_bookends:
             if wide<15:
                 drawline(im,proj(self.out.span(0,self.out.crossings[0][0]+210)),INK,5,.74)
                 drawline(im,proj(self.out.span(0,self.out.crossings[0][0]+210)),GOLD,2,.83)
@@ -202,7 +208,7 @@ class Director:
                 tx('THE BORDER BUS',350,311,46,870,PALE,3)
                 tx('WASHINGTON → CANADA → WASHINGTON',350,361,20,840,COOL,2)
             elif i<t['same']:tx('CANADA',350,318,37,850,COOL,3);pop(proj(self.out.crossings[0][1]),'canada',COOL)
-        tx('ODD STATE OUT  /  02',350,139,16,840,COOL,1)
+        if not self.custom_bookends or not opening: tx('ODD STATE OUT  /  02',350,139,16,840,COOL,1)
         if opening:tx('© OpenStreetMap contributors · GSHHG · NOAA · GMRT',349,1090,13,770,COOL,1)
         for a,b,s in reversed(self.captions):
             if a<=i<b:

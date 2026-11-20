@@ -1,5 +1,7 @@
 # 02 · Upload pack
 
+**For the 50.35-second V5 master:** Use [the final video](final_short_v5.mp4), [V5 captions](final_captions_v5.srt), and the [road-level thumbnail reference near 00:01.52](thumbnail_frame_v5.jpg). Keep the illustrative-route disclosure below. At this cut length, 120% APV means about 60.42 seconds average view duration.
+
 **For the 50-second V4 master:** Use [the final video](final_short_v4.mp4), [V4 captions](final_captions_v4.srt), and the [thumbnail reference around 00:06.18](thumbnail_frame_v4.jpg). The public-road drive is illustrative; add: “The map follows an example public route, not a verified district bus itinerary. The dashed span measures shore to shore, not a ferry route.” At this cut length, 120% APV means 60 seconds average view duration.
 
 **For the original 55-second master:** Use the [final frame around 00:02.500](thumbnail_frame.jpg), [final SRT](final_captions.srt), and [published-map credits](production/README.md#credits-to-include-with-the-upload). The regional route is schematic; include the disclosure sentence below. For this version, >120% APV is >66 seconds average view duration. The 26-second figures and timecodes below refer to the baseline.

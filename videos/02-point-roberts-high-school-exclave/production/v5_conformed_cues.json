@@ -1,0 +1,407 @@
+{
+  "fps": 60,
+  "sample_rate": 48000,
+  "duration_frames": 3021,
+  "seconds": 50.35,
+  "narrator": "voice-01",
+  "cue_source": "V4 stems retained through reverse; new full-sentence closer forced-aligned at 10 ms. Return crossings are timed road actions.",
+  "cues": [
+    {
+      "id": "hook_bus",
+      "frame": 101,
+      "audio_marker_sample": 80800
+    },
+    {
+      "id": "canada",
+      "frame": 180,
+      "audio_marker_sample": 144640
+    },
+    {
+      "id": "same",
+      "frame": 261,
+      "audio_marker_sample": 208960
+    },
+    {
+      "id": "point",
+      "frame": 312,
+      "audio_marker_sample": 249738
+    },
+    {
+      "id": "here",
+      "frame": 367,
+      "audio_marker_sample": 294378
+    },
+    {
+      "id": "blaine",
+      "frame": 391,
+      "audio_marker_sample": 313098
+    },
+    {
+      "id": "there",
+      "frame": 483,
+      "audio_marker_sample": 386538
+    },
+    {
+      "id": "eleven",
+      "frame": 521,
+      "audio_marker_sample": 417258
+    },
+    {
+      "id": "across",
+      "frame": 571,
+      "audio_marker_sample": 457578
+    },
+    {
+      "id": "shortcut",
+      "frame": 640,
+      "audio_marker_sample": 512298
+    },
+    {
+      "id": "no",
+      "frame": 715,
+      "audio_marker_sample": 572298
+    },
+    {
+      "id": "why",
+      "frame": 775,
+      "audio_marker_sample": 620476
+    },
+    {
+      "id": "piece",
+      "frame": 847,
+      "audio_marker_sample": 678076
+    },
+    {
+      "id": "tip_here",
+      "frame": 896,
+      "audio_marker_sample": 716956
+    },
+    {
+      "id": "year",
+      "frame": 928,
+      "audio_marker_sample": 742876
+    },
+    {
+      "id": "draw",
+      "frame": 1055,
+      "audio_marker_sample": 844156
+    },
+    {
+      "id": "parallel",
+      "frame": 1113,
+      "audio_marker_sample": 890716
+    },
+    {
+      "id": "snip",
+      "frame": 1262,
+      "audio_marker_sample": 1010236
+    },
+    {
+      "id": "tip",
+      "frame": 1370,
+      "audio_marker_sample": 1096156
+    },
+    {
+      "id": "road",
+      "frame": 1442,
+      "audio_marker_sample": 1154236
+    },
+    {
+      "id": "foreign",
+      "frame": 1550,
+      "audio_marker_sample": 1240636
+    },
+    {
+      "id": "cross1",
+      "frame": 1675,
+      "audio_marker_sample": 1340100
+    },
+    {
+      "id": "loop",
+      "frame": 1700,
+      "audio_marker_sample": 1360260
+    },
+    {
+      "id": "miles",
+      "frame": 1714,
+      "audio_marker_sample": 1371780
+    },
+    {
+      "id": "bc",
+      "frame": 1777,
+      "audio_marker_sample": 1421700
+    },
+    {
+      "id": "cross2",
+      "frame": 1906,
+      "audio_marker_sample": 1525380
+    },
+    {
+      "id": "arrival",
+      "frame": 1955,
+      "audio_marker_sample": 1564740
+    },
+    {
+      "id": "two",
+      "frame": 1991,
+      "audio_marker_sample": 1593060
+    },
+    {
+      "id": "forty",
+      "frame": 2082,
+      "audio_marker_sample": 1666020
+    },
+    {
+      "id": "prize",
+      "frame": 2146,
+      "audio_marker_sample": 1717380
+    },
+    {
+      "id": "algebra",
+      "frame": 2240,
+      "audio_marker_sample": 1792202
+    },
+    {
+      "id": "after",
+      "frame": 2327,
+      "audio_marker_sample": 1862282
+    },
+    {
+      "id": "go",
+      "frame": 2377,
+      "audio_marker_sample": 1902122
+    },
+    {
+      "id": "cross3",
+      "frame": 2416,
+      "audio_marker_sample": 1933322
+    },
+    {
+      "id": "reverse",
+      "frame": 2522,
+      "audio_marker_sample": 2018282
+    },
+    {
+      "id": "customs",
+      "frame": 2690,
+      "audio_marker_sample": 2152298
+    },
+    {
+      "id": "cross4",
+      "frame": 2701,
+      "audio_marker_sample": 2160938
+    },
+    {
+      "id": "four",
+      "frame": 2737,
+      "audio_marker_sample": 2190218
+    },
+    {
+      "id": "day",
+      "frame": 2848,
+      "audio_marker_sample": 2278538
+    },
+    {
+      "id": "standard",
+      "frame": 2926,
+      "audio_marker_sample": 2341418
+    },
+    {
+      "id": "yellow",
+      "frame": 2956,
+      "audio_marker_sample": 2365418
+    },
+    {
+      "id": "school_close",
+      "frame": 2973,
+      "audio_marker_sample": 2378858
+    },
+    {
+      "id": "bus_close",
+      "frame": 2990,
+      "audio_marker_sample": 2392778
+    }
+  ],
+  "captions": [
+    {
+      "in_frame": 0,
+      "out_frame_exclusive": 43,
+      "text": "Every morning,"
+    },
+    {
+      "in_frame": 51,
+      "out_frame_exclusive": 123,
+      "text": "this American\nschool bus"
+    },
+    {
+      "in_frame": 123,
+      "out_frame_exclusive": 206,
+      "text": "has to drive\nthrough Canada…"
+    },
+    {
+      "in_frame": 225,
+      "out_frame_exclusive": 307,
+      "text": "just to stay in\nthe same state."
+    },
+    {
+      "in_frame": 312,
+      "out_frame_exclusive": 385,
+      "text": "Point Roberts\nis right here."
+    },
+    {
+      "in_frame": 391,
+      "out_frame_exclusive": 503,
+      "text": "Blaine High is\nright over there."
+    },
+    {
+      "in_frame": 514,
+      "out_frame_exclusive": 622,
+      "text": "It’s eleven miles\nacross the bay."
+    },
+    {
+      "in_frame": 630,
+      "out_frame_exclusive": 678,
+      "text": "Nice shortcut."
+    },
+    {
+      "in_frame": 686,
+      "out_frame_exclusive": 757,
+      "text": "Shame there’s\nno bridge."
+    },
+    {
+      "in_frame": 762,
+      "out_frame_exclusive": 834,
+      "text": "So why does\nWashington"
+    },
+    {
+      "in_frame": 834,
+      "out_frame_exclusive": 915,
+      "text": "have a piece\nstuck over here?"
+    },
+    {
+      "in_frame": 922,
+      "out_frame_exclusive": 1055,
+      "text": "In 1846, diplomats"
+    },
+    {
+      "in_frame": 1055,
+      "out_frame_exclusive": 1142,
+      "text": "drew the forty-ninth\nparallel"
+    },
+    {
+      "in_frame": 1142,
+      "out_frame_exclusive": 1223,
+      "text": "straight across\nthe map,"
+    },
+    {
+      "in_frame": 1223,
+      "out_frame_exclusive": 1303,
+      "text": "accidentally\nsnipping off"
+    },
+    {
+      "in_frame": 1303,
+      "out_frame_exclusive": 1392,
+      "text": "this tiny\npeninsula tip."
+    },
+    {
+      "in_frame": 1397,
+      "out_frame_exclusive": 1478,
+      "text": "Which means the\nonly road out…"
+    },
+    {
+      "in_frame": 1482,
+      "out_frame_exclusive": 1548,
+      "text": "leads straight into"
+    },
+    {
+      "in_frame": 1548,
+      "out_frame_exclusive": 1615,
+      "text": "a foreign country."
+    },
+    {
+      "in_frame": 1618,
+      "out_frame_exclusive": 1689,
+      "text": "So the bus\ncrosses here,"
+    },
+    {
+      "in_frame": 1700,
+      "out_frame_exclusive": 1766,
+      "text": "loops twenty-six\nmiles"
+    },
+    {
+      "in_frame": 1766,
+      "out_frame_exclusive": 1826,
+      "text": "through British\nColumbia,"
+    },
+    {
+      "in_frame": 1826,
+      "out_frame_exclusive": 1901,
+      "text": "and crosses\nback into"
+    },
+    {
+      "in_frame": 1901,
+      "out_frame_exclusive": 1981,
+      "text": "the U.S. at Blaine."
+    },
+    {
+      "in_frame": 1991,
+      "out_frame_exclusive": 2072,
+      "text": "Two international\nborders."
+    },
+    {
+      "in_frame": 2082,
+      "out_frame_exclusive": 2130,
+      "text": "Forty minutes."
+    },
+    {
+      "in_frame": 2137,
+      "out_frame_exclusive": 2211,
+      "text": "And the prize\nat the end?"
+    },
+    {
+      "in_frame": 2240,
+      "out_frame_exclusive": 2280,
+      "text": "Algebra."
+    },
+    {
+      "in_frame": 2327,
+      "out_frame_exclusive": 2372,
+      "text": "After school?"
+    },
+    {
+      "in_frame": 2377,
+      "out_frame_exclusive": 2435,
+      "text": "They do the entire"
+    },
+    {
+      "in_frame": 2435,
+      "out_frame_exclusive": 2559,
+      "text": "international commute\nin reverse."
+    },
+    {
+      "in_frame": 2568,
+      "out_frame_exclusive": 2672,
+      "text": "Which means these\nkids clear"
+    },
+    {
+      "in_frame": 2672,
+      "out_frame_exclusive": 2737,
+      "text": "armed customs"
+    },
+    {
+      "in_frame": 2737,
+      "out_frame_exclusive": 2871,
+      "text": "four times every\nsingle day…"
+    },
+    {
+      "in_frame": 2915,
+      "out_frame_exclusive": 2956,
+      "text": "on a standard"
+    },
+    {
+      "in_frame": 2956,
+      "out_frame_exclusive": 3017,
+      "text": "yellow school bus."
+    }
+  ]
+}

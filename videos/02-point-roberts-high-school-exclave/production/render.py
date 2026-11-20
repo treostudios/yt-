@@ -510,7 +510,7 @@ def render_frames():
     return frame_at
 
 
-def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.27, bell=42.32, dialogue=None, length=None, clicks=()):
+def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.27, bell=42.32, dialogue=None, length=None, clicks=(), loop_street=None):
     sr=48000; length=LEN if length is None else length; n=round(sr*length); t=np.arange(n)/sr
     vo=np.zeros(n,np.float32)
     for path,at in ([(VOICE/(clip+'.flac'),at) for clip,at in CLIPS] if dialogue is None else dialogue):
@@ -532,6 +532,14 @@ def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.2
     air[:cross]=air[-cross:]* (1-q)+air[:cross]*q
     air[-cross:]=air[:cross][0]*q+air[-cross:]*(1-q)
     bed=drone*env*.021+air*.017
+    if loop_street is not None:
+        lift_out,lift_in=loop_street
+        gate=np.clip((lift_out-t)/.58,0,1)+np.clip((t-lift_in)/.55,0,1)
+        road=filtered(120,420,n)
+        # Match noise/sine phases across the seam. Dialogue is never wrapped.
+        q=np.linspace(0,1,sr//12,endpoint=False); road[-len(q):]=road[-len(q):]*(1-q)+road[0]*q
+        pulse=np.sin(2*np.pi*round(77*length)*t/length)
+        bed+=np.clip(gate,0,1)*(.010*road+.0045*pulse)
     fx=np.zeros(n)
     def add(at,d,synth):
         m=int(d*sr); s=int(at*sr); u=np.arange(m)/sr
