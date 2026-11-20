@@ -1,0 +1,801 @@
+{
+  "status": "render timeline from forced alignment",
+  "duration_seconds": 50.0,
+  "fps": 60,
+  "total_frames": 3000,
+  "sample_rate": 48000,
+  "picture_quantization": "Floor to the containing 60 fps frame from the estimated word onset. Alignment operates on 10 ms acoustic frames; timing is not ground truth to a millisecond.",
+  "narrator": "voice-01",
+  "dialogue_clip_starts_samples": {
+    "a": 640,
+    "b": 249738,
+    "c": 610396,
+    "d": 1294500,
+    "e": 1792202,
+    "f": 1862282
+  },
+  "camera_keys": {
+    "columns": [
+      "frame",
+      "width_km",
+      "off_nadir_pitch_deg",
+      "center_lon",
+      "center_lat",
+      "heading_deg"
+    ],
+    "keys": [
+      [
+        0,
+        9.1,
+        20,
+        -123.061,
+        48.992,
+        -6
+      ],
+      [
+        180,
+        9.4,
+        19,
+        -123.059,
+        48.995,
+        -4
+      ],
+      [
+        261,
+        33,
+        12,
+        -122.901,
+        48.987,
+        0
+      ],
+      [
+        307,
+        28,
+        13,
+        -122.931,
+        48.991,
+        0
+      ],
+      [
+        367,
+        15,
+        17,
+        -123.032,
+        48.994,
+        -3
+      ],
+      [
+        394,
+        34,
+        12,
+        -122.9,
+        48.986,
+        0
+      ],
+      [
+        483,
+        16,
+        16,
+        -122.793,
+        48.991,
+        2
+      ],
+      [
+        517,
+        29,
+        13,
+        -122.882,
+        48.986,
+        0
+      ],
+      [
+        594,
+        33,
+        12,
+        -122.903,
+        48.983,
+        0
+      ],
+      [
+        715,
+        33,
+        12,
+        -122.905,
+        48.983,
+        0
+      ],
+      [
+        896,
+        11,
+        14,
+        -123.059,
+        48.994,
+        -2
+      ],
+      [
+        1113,
+        10.8,
+        11,
+        -123.061,
+        48.994,
+        0
+      ],
+      [
+        1297,
+        9,
+        16,
+        -123.06,
+        48.989,
+        -3
+      ],
+      [
+        1550,
+        6.3,
+        21,
+        -123.066,
+        49.0,
+        -5
+      ],
+      [
+        1675,
+        6.4,
+        20,
+        -123.066,
+        49.001,
+        -4
+      ],
+      [
+        1716,
+        32,
+        14,
+        -122.943,
+        49.029,
+        0
+      ],
+      [
+        1777,
+        38,
+        12,
+        -122.898,
+        49.042,
+        0
+      ],
+      [
+        1846,
+        29,
+        16,
+        -122.83,
+        49.026,
+        3
+      ],
+      [
+        1906,
+        9,
+        21,
+        -122.74,
+        49.0,
+        3
+      ],
+      [
+        1984,
+        6.1,
+        22,
+        -122.745,
+        48.991,
+        3
+      ],
+      [
+        2327,
+        6.1,
+        22,
+        -122.745,
+        48.991,
+        3
+      ],
+      [
+        2416,
+        10,
+        20,
+        -122.746,
+        49.01,
+        3
+      ],
+      [
+        2522,
+        36,
+        13,
+        -122.895,
+        49.036,
+        0
+      ],
+      [
+        2699,
+        8,
+        20,
+        -123.065,
+        49.002,
+        -4
+      ],
+      [
+        2748,
+        33,
+        12,
+        -122.902,
+        48.987,
+        0
+      ],
+      [
+        2885,
+        14,
+        18,
+        -123.049,
+        48.99,
+        -3
+      ],
+      [
+        2958,
+        9.1,
+        20,
+        -123.061,
+        48.992,
+        -6
+      ],
+      [
+        3000,
+        9.1,
+        20,
+        -123.061,
+        48.992,
+        -6
+      ]
+    ]
+  },
+  "cues": [
+    {
+      "name": "hook_bus",
+      "frame": 101,
+      "audio_marker_sample": 80800,
+      "time_s": 1.68333,
+      "source": "forced-aligned word onset",
+      "action": "Yellow bus rolling on Tyee Drive; first frame already reveals the U.S. → Canada → U.S. paradox.",
+      "sfx": null
+    },
+    {
+      "name": "canada",
+      "frame": 180,
+      "audio_marker_sample": 144640,
+      "time_s": 3.01333,
+      "source": "forced-aligned word onset",
+      "action": "Canada label snaps in and the receiving side of the local border pulses.",
+      "sfx": null
+    },
+    {
+      "name": "same",
+      "frame": 261,
+      "audio_marker_sample": 208960,
+      "time_s": 4.35333,
+      "source": "forced-aligned word onset",
+      "action": "Both Washington endpoints pulse ochre in the same frame.",
+      "sfx": null
+    },
+    {
+      "name": "point",
+      "frame": 312,
+      "audio_marker_sample": 249738,
+      "time_s": 5.20287,
+      "source": "forced-aligned word onset",
+      "action": "Pan west to Point Roberts in the same shared terrain rig.",
+      "sfx": null
+    },
+    {
+      "name": "here",
+      "frame": 367,
+      "audio_marker_sample": 294378,
+      "time_s": 6.13288,
+      "source": "forced-aligned word onset",
+      "action": "Point Roberts land boundary gains an immediate mint core, bloom, locator pulse and coordinate card.",
+      "sfx": "click 535 Hz"
+    },
+    {
+      "name": "blaine",
+      "frame": 391,
+      "audio_marker_sample": 313098,
+      "time_s": 6.52287,
+      "source": "forced-aligned word onset",
+      "action": "Transfer the camera through Boundary Bay toward the school.",
+      "sfx": null
+    },
+    {
+      "name": "there",
+      "frame": 483,
+      "audio_marker_sample": 386538,
+      "time_s": 8.05288,
+      "source": "forced-aligned word onset",
+      "action": "Campus locator pin and expanding ring appear at Blaine High.",
+      "sfx": "click 650 Hz"
+    },
+    {
+      "name": "eleven",
+      "frame": 521,
+      "audio_marker_sample": 417258,
+      "time_s": 8.69288,
+      "source": "forced-aligned word onset",
+      "action": "The first red dash and distance tag appear at the measured west endpoint.",
+      "sfx": null
+    },
+    {
+      "name": "across",
+      "frame": 571,
+      "audio_marker_sample": 457578,
+      "time_s": 9.53288,
+      "source": "forced-aligned word onset",
+      "action": "Red dash head travels east to the measured opposing shore.",
+      "sfx": null
+    },
+    {
+      "name": "shortcut",
+      "frame": 640,
+      "audio_marker_sample": 512298,
+      "time_s": 10.67287,
+      "source": "forced-aligned word onset",
+      "action": "Complete the red shore-to-shore comparison.",
+      "sfx": null
+    },
+    {
+      "name": "no",
+      "frame": 715,
+      "audio_marker_sample": 572298,
+      "time_s": 11.92287,
+      "source": "forced-aligned word onset",
+      "action": "Paint the red X, change the descriptor to no bridge, and begin tracing the road around the bay.",
+      "sfx": "click 222 Hz"
+    },
+    {
+      "name": "why",
+      "frame": 775,
+      "audio_marker_sample": 620476,
+      "time_s": 12.92658,
+      "source": "forced-aligned word onset",
+      "action": "Clear the bay comparison and begin a continuous move west.",
+      "sfx": null
+    },
+    {
+      "name": "piece",
+      "frame": 847,
+      "audio_marker_sample": 678076,
+      "time_s": 14.12658,
+      "source": "forced-aligned word onset",
+      "action": "Trace the enclosed southern tip perimeter.",
+      "sfx": null
+    },
+    {
+      "name": "tip_here",
+      "frame": 896,
+      "audio_marker_sample": 716956,
+      "time_s": 14.93658,
+      "source": "forced-aligned word onset",
+      "action": "World-space pulse lands on the peninsula in the completed outline.",
+      "sfx": null
+    },
+    {
+      "name": "year",
+      "frame": 928,
+      "audio_marker_sample": 742876,
+      "time_s": 15.47658,
+      "source": "forced-aligned word onset",
+      "action": "1846 and Oregon Treaty callouts appear.",
+      "sfx": null
+    },
+    {
+      "name": "draw",
+      "frame": 1055,
+      "audio_marker_sample": 844156,
+      "time_s": 17.58658,
+      "source": "forced-aligned word onset",
+      "action": "Neon draw head starts moving west on the land segment.",
+      "sfx": null
+    },
+    {
+      "name": "parallel",
+      "frame": 1113,
+      "audio_marker_sample": 890716,
+      "time_s": 18.55658,
+      "source": "forced-aligned word onset",
+      "action": "49° N historical reference appears without replacing the mapped line.",
+      "sfx": null
+    },
+    {
+      "name": "snip",
+      "frame": 1262,
+      "audio_marker_sample": 1010236,
+      "time_s": 21.04658,
+      "source": "forced-aligned word onset",
+      "action": "Line finishes; selected tip reacts, without terrain moving or detaching.",
+      "sfx": "line tick 174 Hz"
+    },
+    {
+      "name": "tip",
+      "frame": 1370,
+      "audio_marker_sample": 1096156,
+      "time_s": 22.83658,
+      "source": "forced-aligned word onset",
+      "action": "Second, gentler pulse emphasizes the named peninsula tip.",
+      "sfx": null
+    },
+    {
+      "name": "road",
+      "frame": 1442,
+      "audio_marker_sample": 1154236,
+      "time_s": 24.04658,
+      "source": "forced-aligned word onset",
+      "action": "Public Tyee Drive / 56 Street leader; bus approaches the port.",
+      "sfx": null
+    },
+    {
+      "name": "foreign",
+      "frame": 1550,
+      "audio_marker_sample": 1240636,
+      "time_s": 25.84658,
+      "source": "forced-aligned word onset",
+      "action": "Canada label appears while the bus briefly holds short of the boundary.",
+      "sfx": null
+    },
+    {
+      "name": "cross1",
+      "frame": 1675,
+      "audio_marker_sample": 1340100,
+      "time_s": 27.91875,
+      "source": "forced-aligned word onset",
+      "action": "Bus reaches Boundary Bay intersection, rapid pulse, badge 01, stamp click.",
+      "sfx": "crossing tick 1"
+    },
+    {
+      "name": "loop",
+      "frame": 1700,
+      "audio_marker_sample": 1360260,
+      "time_s": 28.33875,
+      "source": "forced-aligned word onset",
+      "action": "Camera rises and the gold route advances through actual turns around the bay.",
+      "sfx": "short whoosh"
+    },
+    {
+      "name": "miles",
+      "frame": 1714,
+      "audio_marker_sample": 1371780,
+      "time_s": 28.57875,
+      "source": "forced-aligned word onset",
+      "action": "Distance card shows the rounded example road distance separately from the red bay span.",
+      "sfx": null
+    },
+    {
+      "name": "bc",
+      "frame": 1777,
+      "audio_marker_sample": 1421700,
+      "time_s": 29.61875,
+      "source": "forced-aligned word onset",
+      "action": "British Columbia label; BC-17 and BC-99 pins stay registered to route vertices.",
+      "sfx": null
+    },
+    {
+      "name": "cross2",
+      "frame": 1906,
+      "audio_marker_sample": 1525380,
+      "time_s": 31.77875,
+      "source": "forced-aligned word onset",
+      "action": "Bus reaches the Pacific Highway intersection; pulse, badge 02 and click; camera continues to Blaine.",
+      "sfx": "crossing tick 2"
+    },
+    {
+      "name": "arrival",
+      "frame": 1955,
+      "audio_marker_sample": 1564740,
+      "time_s": 32.59875,
+      "source": "forced-aligned word onset",
+      "action": "Approach the campus road on the Blaine mention; settle at public road and reveal campus badge 19 frames later.",
+      "sfx": null
+    },
+    {
+      "name": "two",
+      "frame": 1991,
+      "audio_marker_sample": 1593060,
+      "time_s": 33.18875,
+      "source": "forced-aligned word onset",
+      "action": "Read 2 crossings, one way; no suggestion of two distinct international boundaries.",
+      "sfx": null
+    },
+    {
+      "name": "forty",
+      "frame": 2082,
+      "audio_marker_sample": 1666020,
+      "time_s": 34.70875,
+      "source": "forced-aligned word onset",
+      "action": "Reported ≈40 min one-way card appears.",
+      "sfx": null
+    },
+    {
+      "name": "prize",
+      "frame": 2146,
+      "audio_marker_sample": 1717380,
+      "time_s": 35.77875,
+      "source": "forced-aligned word onset",
+      "action": "Award card unfolds from the school scene before the pause.",
+      "sfx": null
+    },
+    {
+      "name": "algebra",
+      "frame": 2240,
+      "audio_marker_sample": 1792202,
+      "time_s": 37.33754,
+      "source": "forced-aligned word onset",
+      "action": "Instant flip to SOLVE FOR x with one paper click; hold the deadpan.",
+      "sfx": "paper snap"
+    },
+    {
+      "name": "after",
+      "frame": 2327,
+      "audio_marker_sample": 1862282,
+      "time_s": 38.79754,
+      "source": "forced-aligned word onset",
+      "action": "Bell partial; campus departure into homebound sequence.",
+      "sfx": "school bell partial"
+    },
+    {
+      "name": "go",
+      "frame": 2377,
+      "audio_marker_sample": 1902122,
+      "time_s": 39.62754,
+      "source": "forced-aligned word onset",
+      "action": "Bus physically advances on the separate homebound geometry.",
+      "sfx": null
+    },
+    {
+      "name": "cross3",
+      "frame": 2416,
+      "audio_marker_sample": 1933322,
+      "time_s": 40.27754,
+      "source": "timed return action (not a port name)",
+      "action": "Bus reaches the example Pacific Highway return intersection; pulse, badge 03 and click.",
+      "sfx": "crossing tick 3"
+    },
+    {
+      "name": "reverse",
+      "frame": 2522,
+      "audio_marker_sample": 2018282,
+      "time_s": 42.04754,
+      "source": "forced-aligned word onset",
+      "action": "Blue track sweeps around the north shore; soft whoosh.",
+      "sfx": "short whoosh"
+    },
+    {
+      "name": "customs",
+      "frame": 2689,
+      "audio_marker_sample": 2151242,
+      "time_s": 44.81754,
+      "source": "forced-aligned word onset",
+      "action": "Return camera tightens onto Boundary Bay; no checkpoint procedures or weapons depicted.",
+      "sfx": null
+    },
+    {
+      "name": "cross4",
+      "frame": 2699,
+      "audio_marker_sample": 2159882,
+      "time_s": 44.99754,
+      "source": "timed return action (not a port name)",
+      "action": "Bus reaches the Boundary Bay return intersection; pulse, badge 04 and click.",
+      "sfx": "crossing tick 4"
+    },
+    {
+      "name": "four",
+      "frame": 2735,
+      "audio_marker_sample": 2188202,
+      "time_s": 45.58754,
+      "source": "forced-aligned word onset",
+      "action": "Summary settles on 4 BORDER CROSSINGS / PER SCHOOL DAY.",
+      "sfx": "count click 418 Hz"
+    },
+    {
+      "name": "day",
+      "frame": 2854,
+      "audio_marker_sample": 2283242,
+      "time_s": 47.56754,
+      "source": "forced-aligned word onset",
+      "action": "School-day denominator remains readable.",
+      "sfx": null
+    },
+    {
+      "name": "standard",
+      "frame": 2897,
+      "audio_marker_sample": 2318282,
+      "time_s": 48.29754,
+      "source": "forced-aligned word onset",
+      "action": "Glide to the first shot’s Tyee Drive framing; bus replaces the unfinished spoken noun.",
+      "sfx": null
+    },
+    {
+      "name": "yellow",
+      "frame": 2947,
+      "audio_marker_sample": 2357642,
+      "time_s": 49.11754,
+      "source": "forced-aligned word onset",
+      "action": "Hold the matching yellow bus pose through the cut back to “Every morning.”",
+      "sfx": null
+    }
+  ],
+  "captions": [
+    {
+      "in_frame": 0,
+      "out_frame_exclusive": 43,
+      "text": "Every morning,"
+    },
+    {
+      "in_frame": 51,
+      "out_frame_exclusive": 123,
+      "text": "this American\nschool bus"
+    },
+    {
+      "in_frame": 123,
+      "out_frame_exclusive": 206,
+      "text": "has to drive\nthrough Canada…"
+    },
+    {
+      "in_frame": 225,
+      "out_frame_exclusive": 307,
+      "text": "just to stay in\nthe same state."
+    },
+    {
+      "in_frame": 312,
+      "out_frame_exclusive": 385,
+      "text": "Point Roberts\nis right here."
+    },
+    {
+      "in_frame": 391,
+      "out_frame_exclusive": 503,
+      "text": "Blaine High is\nright over there."
+    },
+    {
+      "in_frame": 514,
+      "out_frame_exclusive": 622,
+      "text": "It’s eleven miles\nacross the bay."
+    },
+    {
+      "in_frame": 630,
+      "out_frame_exclusive": 678,
+      "text": "Nice shortcut."
+    },
+    {
+      "in_frame": 686,
+      "out_frame_exclusive": 757,
+      "text": "Shame there’s\nno bridge."
+    },
+    {
+      "in_frame": 762,
+      "out_frame_exclusive": 834,
+      "text": "So why does\nWashington"
+    },
+    {
+      "in_frame": 834,
+      "out_frame_exclusive": 915,
+      "text": "have a piece\nstuck over here?"
+    },
+    {
+      "in_frame": 922,
+      "out_frame_exclusive": 1055,
+      "text": "In 1846, diplomats"
+    },
+    {
+      "in_frame": 1055,
+      "out_frame_exclusive": 1142,
+      "text": "drew the forty-ninth\nparallel"
+    },
+    {
+      "in_frame": 1142,
+      "out_frame_exclusive": 1223,
+      "text": "straight across\nthe map,"
+    },
+    {
+      "in_frame": 1223,
+      "out_frame_exclusive": 1303,
+      "text": "accidentally\nsnipping off"
+    },
+    {
+      "in_frame": 1303,
+      "out_frame_exclusive": 1392,
+      "text": "this tiny\npeninsula tip."
+    },
+    {
+      "in_frame": 1397,
+      "out_frame_exclusive": 1478,
+      "text": "Which means the\nonly road out…"
+    },
+    {
+      "in_frame": 1482,
+      "out_frame_exclusive": 1548,
+      "text": "leads straight into"
+    },
+    {
+      "in_frame": 1548,
+      "out_frame_exclusive": 1615,
+      "text": "a foreign country."
+    },
+    {
+      "in_frame": 1618,
+      "out_frame_exclusive": 1689,
+      "text": "So the bus\ncrosses here,"
+    },
+    {
+      "in_frame": 1700,
+      "out_frame_exclusive": 1766,
+      "text": "loops twenty-six\nmiles"
+    },
+    {
+      "in_frame": 1766,
+      "out_frame_exclusive": 1826,
+      "text": "through British\nColumbia,"
+    },
+    {
+      "in_frame": 1826,
+      "out_frame_exclusive": 1901,
+      "text": "and crosses\nback into"
+    },
+    {
+      "in_frame": 1901,
+      "out_frame_exclusive": 1981,
+      "text": "the U.S. at Blaine."
+    },
+    {
+      "in_frame": 1991,
+      "out_frame_exclusive": 2072,
+      "text": "Two international\nborders."
+    },
+    {
+      "in_frame": 2082,
+      "out_frame_exclusive": 2130,
+      "text": "Forty minutes."
+    },
+    {
+      "in_frame": 2137,
+      "out_frame_exclusive": 2211,
+      "text": "And the prize\nat the end?"
+    },
+    {
+      "in_frame": 2240,
+      "out_frame_exclusive": 2280,
+      "text": "Algebra."
+    },
+    {
+      "in_frame": 2327,
+      "out_frame_exclusive": 2372,
+      "text": "After school?"
+    },
+    {
+      "in_frame": 2377,
+      "out_frame_exclusive": 2435,
+      "text": "They do the entire"
+    },
+    {
+      "in_frame": 2435,
+      "out_frame_exclusive": 2559,
+      "text": "international commute\nin reverse."
+    },
+    {
+      "in_frame": 2566,
+      "out_frame_exclusive": 2671,
+      "text": "Which means these\nkids clear"
+    },
+    {
+      "in_frame": 2671,
+      "out_frame_exclusive": 2735,
+      "text": "armed customs"
+    },
+    {
+      "in_frame": 2735,
+      "out_frame_exclusive": 2879,
+      "text": "four times every\nsingle day…"
+    },
+    {
+      "in_frame": 2886,
+      "out_frame_exclusive": 2984,
+      "text": "on a standard\nyellow…"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 # 02 · Upload pack
 
-**For the delivered 55-second master:** Use the [final frame around 00:02.500](thumbnail_frame.jpg), [final SRT](final_captions.srt), and [published-map credits](production/README.md#credits-to-include-with-the-upload). The regional route is schematic; include the disclosure sentence below. For this version, >120% APV is >66 seconds average view duration. The 26-second figures and timecodes below refer to the baseline.
+**For the 50-second V4 master:** Use [the final video](final_short_v4.mp4), [V4 captions](final_captions_v4.srt), and the [thumbnail reference around 00:06.18](thumbnail_frame_v4.jpg). The public-road drive is illustrative; add: “The map follows an example public route, not a verified district bus itinerary. The dashed span measures shore to shore, not a ferry route.” At this cut length, 120% APV means 60 seconds average view duration.
+
+**For the original 55-second master:** Use the [final frame around 00:02.500](thumbnail_frame.jpg), [final SRT](final_captions.srt), and [published-map credits](production/README.md#credits-to-include-with-the-upload). The regional route is schematic; include the disclosure sentence below. For this version, >120% APV is >66 seconds average view duration. The 26-second figures and timecodes below refer to the baseline.
 
 ## Title candidates — hypotheses, not tested results
 
@@ -25,7 +27,7 @@ If using the schematic edit, add: “The map shows the sequence of border crossi
 
 **Pinned comment:** What’s the strangest route you’ve ever had to take just to stay in the same state or province?
 
-**Thumbnail:** Select around **00:02:27** (frame 87) in the YouTube app: bus on the U.S. side, border and coastline visible, plus the `four times a day.` subtitle. Widen or reposition labels in the render if they crop badly in a channel/search thumbnail. No extra thumbnail-only flash in the timeline. Select it before publishing. [2](https://support.google.com/youtube/answer/10343433?amp=&co=GENIE.Platform%3DAndroid&hl=en)
+**26-second baseline thumbnail:** Select around **00:02:27** (frame 87) in the YouTube app: bus on the U.S. side, border and coastline visible, plus the `four times a day.` subtitle. Widen or reposition labels in the render if they crop badly in a channel/search thumbnail. No extra thumbnail-only flash in the timeline. Select it before publishing. [2](https://support.google.com/youtube/answer/10343433?amp=&co=GENIE.Platform%3DAndroid&hl=en)
 
 ## Publish and measure
 

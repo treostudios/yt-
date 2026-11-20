@@ -235,7 +235,7 @@ fall=np.clip((y_grid-741)/440,0,.94)
 GRADE=np.ascontiguousarray(np.broadcast_to((edge*(1-fall*.87))[:,:,None],(H,W,3)).astype(np.float32))
 
 
-def render_engine(example_route=False):
+def render_engine(example_route=False, director_factory=None):
     tex,_,_,_=v1.render_map(); view=overview(); land,us,local,dems=v1.read_assets()
     height=heightfield(land,dems)
     # Territory masks remain geometric and share the camera transform.
@@ -252,10 +252,11 @@ def render_engine(example_route=False):
     out=Route(roads(local['roads'],[241,826,13,478,479,471],(241,826)))
     home=Route(roads(local['roads'],[232,462,452]))
     route_state=None
+    custom=director_factory(land,us,treaty) if director_factory else None
     if example_route:
         from v3_graphics import Director
         route_state=Director(land)
-    solve=camera(route_state.keys) if route_state else camera()
+    solve=camera(custom.keys if custom else (route_state.keys if route_state else KEYS))
     rq=PchipInterpolator([42,91,180,205,227,248,274],[0,out.hit_s*.17,out.hit_s*.53,out.hit_s*.82,out.hit_s,out.end*.99,out.end])
     hq=PchipInterpolator([1429,1445,1459,1495],[0,home.hit_s*.64,home.hit_s,home.end])
     pos={key:np.array(v1.xy(*ll)) for key,ll in [('point',POINT),('school',SCHOOL),('city',BLAINE),('bay',BAY),('bc',BC),('port',v1.PORT)]}
@@ -291,7 +292,7 @@ def render_engine(example_route=False):
                 room=np.minimum(np.minimum(gx,gy),np.minimum(v1.MAP_W-1-gx,v1.MAP_H-1-gy))
                 coeff=(np.clip(room/170,0,1)*detail)[:,:,None]
                 frame[:]=frame*(1-coeff)+plate*coeff
-        if detail>.22:
+        if detail>.22 and not custom:
             same=life(fno,153,195,13)*.31
             tipglow=(life(fno,601,730,18)*.19+life(fno,871,927,14)*.29)
             ca=life(fno,227,275,8)*.29+life(fno,945,1039,19)*.20+life(fno,1404,1469,11)*.24
@@ -306,7 +307,7 @@ def render_engine(example_route=False):
                 for i,val in enumerate((18,46,59)):
                     frame[:,:,i]=np.minimum(255,frame[:,:,i].astype(np.float32)+gain*val).astype(np.uint8)
         cv2.multiply(frame,GRADE,dst=frame,dtype=cv2.CV_8UC3)
-        afternoon=life(fno,1267,1618,42)
+        afternoon=0 if custom else life(fno,1267,1618,42)
         if afternoon>.01:
             cv2.addWeighted(frame,1,frame,0,afternoon*2,frame)
         p={a:project(b) for a,b in pos.items()}; exact1=project(out.hit); exact4=project(route_state.crossings[3] if route_state else home.hit)
@@ -326,6 +327,10 @@ def render_engine(example_route=False):
                 qx=x+dr*110
                 drawline(frame,[(qx-dr*15,y-22),(qx,y-22),(qx,y+22),(qx-dr*15,y+22)],sign,2,q*.84)
             v1.paste(frame,chip(name,num),x,y,q)
+        if custom:
+            for line in boundary:
+                a=project(line); drawline(frame,a,INK,5,detail*.85); drawline(frame,a,PALE,2,detail*.75)
+            return custom.paint(frame,fno,project,wide,marker,tx,p)
         if detail>.12:
             fade_b=life(fno,30,760,28)+life(fno,864,1614,22)
             for line in boundary:

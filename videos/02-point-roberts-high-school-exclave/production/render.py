@@ -510,11 +510,11 @@ def render_frames():
     return frame_at
 
 
-def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.27, bell=42.32):
-    sr=48000; n=sr*LEN; t=np.arange(n)/sr
+def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.27, bell=42.32, dialogue=None, length=None, clicks=()):
+    sr=48000; length=LEN if length is None else length; n=round(sr*length); t=np.arange(n)/sr
     vo=np.zeros(n,np.float32)
-    for clip,at in CLIPS:
-        buf=subprocess.check_output([FFMPEG,'-v','error','-i',str(VOICE/(clip+'.flac')),'-af',
+    for path,at in ([(VOICE/(clip+'.flac'),at) for clip,at in CLIPS] if dialogue is None else dialogue):
+        buf=subprocess.check_output([FFMPEG,'-v','error','-i',str(path),'-af',
             'highpass=f=78,acompressor=threshold=0.1:ratio=2.4:attack=12:release=100','-ar',str(sr),'-ac','1','-f','f32le','-'])
         a=np.frombuffer(buf,dtype='<f4').copy()
         st=round(at*sr); a=a[:min(n-st,len(a))]
@@ -525,8 +525,8 @@ def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.2
     def filtered(lo,hi,length):
         return signal.sosfilt(signal.butter(2,[lo,hi],btype='bandpass',fs=sr,output='sos'),rng.standard_normal(length))
     # Seam-safe synthetic ambient tones and subdued air. No music/FX licensing dependencies.
-    env=.62+.21*np.cos(2*np.pi*2*t/LEN)+.15*np.sin(2*np.pi*5*t/LEN)
-    drone=sum(np.sin(2*np.pi*(round(f*LEN)*t/LEN)+i*.6)*v for i,(f,v) in enumerate([(55,.41),(82.41,.18),(110,.14),(130.81,.08),(164.81,.08)]))
+    env=.62+.21*np.cos(2*np.pi*2*t/length)+.15*np.sin(2*np.pi*5*t/length)
+    drone=sum(np.sin(2*np.pi*(round(f*length)*t/length)+i*.6)*v for i,(f,v) in enumerate([(55,.41),(82.41,.18),(110,.14),(130.81,.08),(164.81,.08)]))
     air=filtered(260,1100,n)
     cross=sr//4; q=np.linspace(0,1,cross,endpoint=False)
     air[:cross]=air[-cross:]* (1-q)+air[:cross]*q
@@ -542,6 +542,7 @@ def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.2
     for a,d in ([(10.67,1.07),(21.94,.76),(31.45,.67),(44.3,.75),(53.36,.70)] if whooshes is None else whooshes):
         add(a,d,lambda u,m: filtered(360,1750,m)*.065*np.sin(np.pi*u/(m/sr))**2)
     tick(line_hit,174)
+    for at,pitch in clicks: tick(at,pitch)
     add(paper,.18,lambda u,m:filtered(320,1800,m)*.086*np.exp(-u/.045)*np.minimum(1,u/.009))
     add(bell,1.05,lambda u,m: .047*(1-np.exp(-u/.006))*np.exp(-u/.19)*(np.sin(2*np.pi*785*u)+.31*np.sin(2*np.pi*1270*u)))
     voiced=signal.sosfilt(signal.butter(1,6,fs=sr,output='sos'),np.abs(vo))

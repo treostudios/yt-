@@ -1,8 +1,8 @@
 # Point Roberts · final production handoff
 
-## V4 script and production blueprint
+## V4 master · operator's polished script
 
-- [Rewritten VO and shot-by-shot explainer](v4_shot_blueprint.md) · [60 fps cue sheet](v4_sync_cues.json). This is a new script and synchronization plan; V3 remains the latest rendered master.
+- [Final V4 Short](../final_short_v4.mp4) · [Executed visual/audio blueprint](v4_master_blueprint.md) · [Actual 60 fps cue sheet](v4_master_cues.json) · [Frame-by-frame plan](v4_frame_plan.csv) · [Aligned captions](../final_captions_v4.srt). 50 seconds, new recording with the same narrator identity. This supersedes the [earlier V4 script proposal](v4_shot_blueprint.md).
 
 ## V3 master
 
