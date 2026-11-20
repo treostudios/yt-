@@ -510,7 +510,7 @@ def render_frames():
     return frame_at
 
 
-def make_audio(out):
+def make_audio(out, *, crossings=None, whooshes=None, line_hit=27.94, paper=40.27, bell=42.32):
     sr=48000; n=sr*LEN; t=np.arange(n)/sr
     vo=np.zeros(n,np.float32)
     for clip,at in CLIPS:
@@ -538,12 +538,12 @@ def make_audio(out):
         d=synth(u,m)[:min(m,n-s)]; fx[s:s+len(d)]+=d
     def tick(at,pitch):
         add(at,.23,lambda u,m: .095*(1-np.exp(-u/.004))*np.exp(-u/.048)*(np.sin(2*np.pi*(pitch*u-92*u*u))+.12*filtered(670,2800,m)))
-    for idx,a in enumerate(CROSSINGS):tick(a,[298,341,315,385][idx])
-    for a,d in [(10.67,1.07),(21.94,.76),(31.45,.67),(44.3,.75),(53.36,.70)]:
+    for idx,a in enumerate(CROSSINGS if crossings is None else crossings):tick(a,[298,341,315,385][idx])
+    for a,d in ([(10.67,1.07),(21.94,.76),(31.45,.67),(44.3,.75),(53.36,.70)] if whooshes is None else whooshes):
         add(a,d,lambda u,m: filtered(360,1750,m)*.065*np.sin(np.pi*u/(m/sr))**2)
-    tick(27.94,174)
-    add(40.27,.18,lambda u,m:filtered(320,1800,m)*.086*np.exp(-u/.045)*np.minimum(1,u/.009))
-    add(42.32,1.05,lambda u,m: .047*(1-np.exp(-u/.006))*np.exp(-u/.19)*(np.sin(2*np.pi*785*u)+.31*np.sin(2*np.pi*1270*u)))
+    tick(line_hit,174)
+    add(paper,.18,lambda u,m:filtered(320,1800,m)*.086*np.exp(-u/.045)*np.minimum(1,u/.009))
+    add(bell,1.05,lambda u,m: .047*(1-np.exp(-u/.006))*np.exp(-u/.19)*(np.sin(2*np.pi*785*u)+.31*np.sin(2*np.pi*1270*u)))
     voiced=signal.sosfilt(signal.butter(1,6,fs=sr,output='sos'),np.abs(vo))
     ambient=bed*np.clip(1-voiced*4,.49,1)
     mix=np.stack((vo+ambient+fx*.91,vo+ambient+fx*.96),axis=1)

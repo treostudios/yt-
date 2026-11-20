@@ -1,5 +1,14 @@
 # Point Roberts · final production handoff
 
+## V2 master
+
+- [Final V2 Short](../final_short_v2.mp4) · 55 seconds, 1080 × 1920 delivery, 30 fps CFR, Rec.709, H.264/AAC, full decode of 1,650 frames. Measured V2 audio: −14.1 LUFS integrated, −1.3 dBTP. [V2 thumbnail frame](../thumbnail_frame_v2.jpg) at ~00:02.13; the same [caption transcript](../final_captions.srt) is burned into V2.
+- [Technical teardown and V2 blueprint](v2_motion_blueprint.md) · [V2 cue sheet](v2_motion_cues.json). The new renderer creates a pitched heightfield view and projects road, border, camera and point graphics through it. It is a custom Python/OpenCV render, not a native GEOlayers or AE file. Overview relies on the coarser Natural Earth plate; local relief uses the NOAA/GMRT sources below. It uses the existing isolated narration and a retimed sound mix.
+- The local animated stroke uses a [public transcription of IBC-derived boundary coordinates](https://soaringweb.org/Airspace/NA/CanUSborder.txt) clipped to the mapped shoreline, not a surveyed legal line or a direct import of the official IBC shapefile specified in the blueprint. Crossings 1 and 4 are computed on two different linked, public Point Roberts approach centerlines, not claimed inspection lanes. Crossings 2 and 3 use labeled regional transitions without port pins, a school-bus trace through British Columbia, or claimed campus access geometry. The school marker is a public campus locator, not a pickup point.
+- To rebuild after the common setup below, run `python "$D/render_v2.py"`. Pass `--samples` to inspect the keyframes before encoding. V1 remains available below. Neither this V2 export nor its metadata has been uploaded.
+
+## V1 master
+
 - [Final Short](../final_short.mp4) · 55 seconds, 1080×1920 delivery, 30 fps CFR, H.264 / AAC stereo, Rec.709, web-optimized MP4.
 - [Final captions](../final_captions.srt) · timed to the rendered narration; the master also has burned-in captions. [Final timeline](../final_timeline.json) · edit cues and camera keyframes. [Thumbnail reference](../thumbnail_frame.jpg) · select the actual frame near 00:02.500 in the Shorts upload interface.
 - Full program decode completed: 1,650 frames; AAC at 48 kHz stereo; −14.1 LUFS integrated and −1.2 dBTP measured from the rendered audio. No platform upload was performed.

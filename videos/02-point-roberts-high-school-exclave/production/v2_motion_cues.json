@@ -1,0 +1,471 @@
+{
+  "name": "The Border Bus: V2 production cues",
+  "status": "blueprint_only",
+  "fps": 30,
+  "duration_frames": 1650,
+  "width_px": 1080,
+  "height_px": 1920,
+  "timing": "Integer frames with exclusive out points. Cue points are design targets; conform semantic markers to final voice waveform before render.",
+  "source_audio": "Existing six isolated narration clips; exact narration is in v2_motion_blueprint.md.",
+  "route_modes": {
+    "default": "Verified local approach plus active region-level map transitions; no implied checkpoint for crossings 2 and 3.",
+    "full": "Use only after current authoritative road-by-road corridor and port confirmation; use physical road/border intersection triggers."
+  },
+  "scenes": [
+    {
+      "id": "descent",
+      "in_frame": 0,
+      "out_frame": 114
+    },
+    {
+      "id": "two_washington_pins",
+      "in_frame": 114,
+      "out_frame": 181
+    },
+    {
+      "id": "boundary_bay_outbound",
+      "in_frame": 181,
+      "out_frame": 354
+    },
+    {
+      "id": "the_bay",
+      "in_frame": 354,
+      "out_frame": 597
+    },
+    {
+      "id": "treaty",
+      "in_frame": 597,
+      "out_frame": 930
+    },
+    {
+      "id": "arrival",
+      "in_frame": 930,
+      "out_frame": 1110
+    },
+    {
+      "id": "clock_and_late_slip",
+      "in_frame": 1110,
+      "out_frame": 1267
+    },
+    {
+      "id": "afternoon_return",
+      "in_frame": 1267,
+      "out_frame": 1478
+    },
+    {
+      "id": "payoff_and_loop",
+      "in_frame": 1478,
+      "out_frame": 1650
+    }
+  ],
+  "crossings": [
+    {
+      "count": 1,
+      "frame": 227,
+      "from_country": "US",
+      "to_country": "CA",
+      "geometry": "Boundary Bay road/IBC intersection"
+    },
+    {
+      "count": 2,
+      "frame": 1021,
+      "from_country": "CA",
+      "to_country": "US",
+      "geometry": "Unverified east port: default Blaine area label, no point"
+    },
+    {
+      "count": 3,
+      "frame": 1404,
+      "from_country": "US",
+      "to_country": "CA",
+      "geometry": "Unverified east port: default regional receiving wash, no point"
+    },
+    {
+      "count": 4,
+      "frame": 1459,
+      "from_country": "CA",
+      "to_country": "US",
+      "geometry": "Boundary Bay homebound road/IBC intersection"
+    }
+  ],
+  "cues": [
+    {
+      "frame": 0,
+      "trigger": "This school bus",
+      "geographic_anchor": "point_roberts_locator",
+      "visual": "Bus pictogram inside geographic locator. Descent already under way.",
+      "sound": "soft descent whoosh"
+    },
+    {
+      "frame": 36,
+      "trigger": "leaves the country",
+      "geographic_anchor": "boundary_bay_land_border",
+      "visual": "Draw local boundary and reveal travel direction toward it. This is not a crossing.",
+      "sound": null
+    },
+    {
+      "frame": 90,
+      "trigger": "high school",
+      "geographic_anchor": "blaine_high_school",
+      "visual": "Show destination intent as a bearing cue, not a road.",
+      "sound": null
+    },
+    {
+      "frame": 127,
+      "trigger": "school",
+      "geographic_anchor": "blaine_high_school",
+      "visual": "Reveal campus anchor while retaining the Point Roberts locator.",
+      "sound": null
+    },
+    {
+      "frame": 166,
+      "trigger": "same state",
+      "geographic_anchor": "both_washington_endpoints",
+      "visual": "Simultaneous matching Washington fill and endpoint accents.",
+      "sound": "muted paired tone"
+    },
+    {
+      "frame": 185,
+      "trigger": "First stop",
+      "geographic_anchor": "boundary_bay_port",
+      "visual": "Deploy port leader on continuous local approach.",
+      "sound": null
+    },
+    {
+      "frame": 227,
+      "trigger": "Canada",
+      "geographic_anchor": "boundary_bay_outbound_intersection",
+      "visual": "Front axle hits road/border intersection. Ring, receiving fill, count 01.",
+      "sound": "crossing tick 1"
+    },
+    {
+      "frame": 247,
+      "trigger": "only road out",
+      "geographic_anchor": "tyee_56_street",
+      "visual": "Reveal verified public land connection; dim other roads.",
+      "sound": null
+    },
+    {
+      "frame": 305,
+      "trigger": "Point Roberts, Washington",
+      "geographic_anchor": "point_roberts_locator",
+      "visual": "Drop the town label on land and keep it anchored through the climb.",
+      "sound": null
+    },
+    {
+      "frame": 380,
+      "trigger": "Blaine",
+      "geographic_anchor": "blaine_city",
+      "visual": "Deploy city locator distinct from the school footprint.",
+      "sound": null
+    },
+    {
+      "frame": 416,
+      "trigger": "Boundary Bay",
+      "geographic_anchor": "boundary_bay_water",
+      "visual": "Reveal basin outline and anchored water label.",
+      "sound": "quiet coastal air"
+    },
+    {
+      "frame": 467,
+      "trigger": "right there",
+      "geographic_anchor": "blaine_city",
+      "visual": "One geographic pulse; both endpoints remain visible.",
+      "sound": null
+    },
+    {
+      "frame": 496,
+      "trigger": "Unfortunately",
+      "geographic_anchor": "boundary_bay_water",
+      "visual": "Let water and the pause carry the setup; retain drift.",
+      "sound": "bed only"
+    },
+    {
+      "frame": 548,
+      "trigger": "not a boat",
+      "geographic_anchor": "boundary_bay_water",
+      "visual": "Amber remains on real road. Flag-card eye-line toward water.",
+      "sound": "no comedy sting"
+    },
+    {
+      "frame": 608,
+      "trigger": "this tip",
+      "geographic_anchor": "point_roberts_south_polygon",
+      "visual": "Light its shape without painting the surrounding sea.",
+      "sound": null
+    },
+    {
+      "frame": 678,
+      "trigger": "1846",
+      "geographic_anchor": "treaty_trace_origin",
+      "visual": "Reveal compact date label at trace origin.",
+      "sound": null
+    },
+    {
+      "frame": 735,
+      "trigger": "Oregon Treaty",
+      "geographic_anchor": "treaty_trace_origin",
+      "visual": "Reveal source label above the first land segment.",
+      "sound": null
+    },
+    {
+      "frame": 760,
+      "trigger": "extended the border",
+      "geographic_anchor": "ibc_relevant_land_segment",
+      "visual": "Start actual chainage trim from the east; maintain casing and growing trail.",
+      "sound": "quiet line texture"
+    },
+    {
+      "frame": 793,
+      "trigger": "forty-ninth parallel",
+      "geographic_anchor": "ibc_relevant_land_segment",
+      "visual": "Pin historical latitude annotation to mapped explanation.",
+      "sound": null
+    },
+    {
+      "frame": 880,
+      "trigger": "U.S. side",
+      "geographic_anchor": "point_roberts_south_polygon",
+      "visual": "Complete receiving U.S. fill in sync with trace settlement.",
+      "sound": "subtle paper contact"
+    },
+    {
+      "frame": 957,
+      "trigger": "British Columbia",
+      "geographic_anchor": "verified_eastbound_route_or_bc_region",
+      "visual": "Advance route head only on verified road. Fallback: Canada land fill and regional move, no assigned road or floating bus.",
+      "sound": "light engine/ambience"
+    },
+    {
+      "frame": 1021,
+      "trigger": "back into the U.S. at Blaine",
+      "geographic_anchor": "east_intersection_or_blaine_region",
+      "visual": "Count 02 from confirmed intersection or from the Blaine area label with no port point.",
+      "sound": "crossing tick 2"
+    },
+    {
+      "frame": 1095,
+      "trigger": "high school",
+      "geographic_anchor": "blaine_high_school",
+      "visual": "Deploy campus footprint/pin, separate from vehicle arrival location.",
+      "sound": null
+    },
+    {
+      "frame": 1134,
+      "trigger": "forty minutes",
+      "geographic_anchor": "blaine_high_school",
+      "visual": "Campus clock resolves to ≈40 MIN; no computed speed or distance implied.",
+      "sound": null
+    },
+    {
+      "frame": 1181,
+      "trigger": "One way",
+      "geographic_anchor": "blaine_high_school",
+      "visual": "Unfold directional tab from clock body.",
+      "sound": null
+    },
+    {
+      "frame": 1207,
+      "trigger": "[silent late slip]",
+      "geographic_anchor": "blaine_high_school",
+      "visual": "Unfold illustrated slip from clock, no actual student data.",
+      "sound": "paper fold"
+    },
+    {
+      "frame": 1268,
+      "trigger": "last bell",
+      "geographic_anchor": "blaine_high_school",
+      "visual": "Reset the visual direction from the same spatial anchor.",
+      "sound": "school bell partial"
+    },
+    {
+      "frame": 1318,
+      "trigger": "do it all again",
+      "geographic_anchor": "return_corridor_or_bc_region",
+      "visual": "Reverse geographic motion, not footage. Only confirmed geometry gets a road trace.",
+      "sound": "soft roll"
+    },
+    {
+      "frame": 1404,
+      "trigger": "Into Canada",
+      "geographic_anchor": "east_return_intersection_or_bc_region",
+      "visual": "Count 03 at confirmed hit or regional receiving-country wash.",
+      "sound": "crossing tick 3"
+    },
+    {
+      "frame": 1459,
+      "trigger": "Back into Washington",
+      "geographic_anchor": "boundary_bay_homebound_intersection",
+      "visual": "Front axle crosses verified Point Roberts approach world intersection; count 04.",
+      "sound": "crossing tick 4"
+    },
+    {
+      "frame": 1484,
+      "trigger": "Four border crossings",
+      "geographic_anchor": "boundary_bay_homebound_intersection",
+      "visual": "Grow compact four-crossing sum out of count 04; no fifth tick.",
+      "sound": null
+    },
+    {
+      "frame": 1555,
+      "trigger": "their own district",
+      "geographic_anchor": "both_washington_endpoints",
+      "visual": "Matching district labels on endpoints; no district fill through Canada.",
+      "sound": null
+    },
+    {
+      "frame": 1610,
+      "trigger": "[loop reset]",
+      "geographic_anchor": "point_roberts_locator",
+      "visual": "Lift toward same overview locator; clear travel graphics; match motion and grade.",
+      "sound": "wrap ambient bed"
+    }
+  ],
+  "source_caption_frames": [
+    {
+      "in_frame": 0,
+      "out_frame": 36,
+      "text": "This school bus"
+    },
+    {
+      "in_frame": 36,
+      "out_frame": 72,
+      "text": "leaves the country"
+    },
+    {
+      "in_frame": 72,
+      "out_frame": 115,
+      "text": "just to take kids\nto high school."
+    },
+    {
+      "in_frame": 122,
+      "out_frame": 180,
+      "text": "And the school is\nin the same state."
+    },
+    {
+      "in_frame": 181,
+      "out_frame": 209,
+      "text": "First stop:"
+    },
+    {
+      "in_frame": 215,
+      "out_frame": 243,
+      "text": "Canada."
+    },
+    {
+      "in_frame": 246,
+      "out_frame": 295,
+      "text": "That’s the only road\nout of"
+    },
+    {
+      "in_frame": 295,
+      "out_frame": 352,
+      "text": "Point Roberts,\nWashington."
+    },
+    {
+      "in_frame": 368,
+      "out_frame": 437,
+      "text": "That’s Blaine, right\nacross Boundary Bay."
+    },
+    {
+      "in_frame": 457,
+      "out_frame": 487,
+      "text": "It’s right there."
+    },
+    {
+      "in_frame": 495,
+      "out_frame": 526,
+      "text": "Unfortunately,"
+    },
+    {
+      "in_frame": 528,
+      "out_frame": 580,
+      "text": "the bus is not a boat."
+    },
+    {
+      "in_frame": 600,
+      "out_frame": 664,
+      "text": "Why is this tip\neven American?"
+    },
+    {
+      "in_frame": 669,
+      "out_frame": 726,
+      "text": "In 1846,"
+    },
+    {
+      "in_frame": 727,
+      "out_frame": 774,
+      "text": "the Oregon Treaty\nextended the border"
+    },
+    {
+      "in_frame": 774,
+      "out_frame": 843,
+      "text": "along the\n49th parallel."
+    },
+    {
+      "in_frame": 848,
+      "out_frame": 926,
+      "text": "That left the tip\non the U.S. side."
+    },
+    {
+      "in_frame": 933,
+      "out_frame": 989,
+      "text": "So the bus goes through\nBritish Columbia,"
+    },
+    {
+      "in_frame": 991,
+      "out_frame": 1068,
+      "text": "crosses back into\nthe U.S. at Blaine,"
+    },
+    {
+      "in_frame": 1068,
+      "out_frame": 1107,
+      "text": "and pulls up\nto high school."
+    },
+    {
+      "in_frame": 1110,
+      "out_frame": 1169,
+      "text": "That’s about forty\nminutes on the bus."
+    },
+    {
+      "in_frame": 1181,
+      "out_frame": 1204,
+      "text": "One way."
+    },
+    {
+      "in_frame": 1267,
+      "out_frame": 1312,
+      "text": "Then the last bell rings,"
+    },
+    {
+      "in_frame": 1312,
+      "out_frame": 1364,
+      "text": "and they do it all again."
+    },
+    {
+      "in_frame": 1390,
+      "out_frame": 1422,
+      "text": "Into Canada."
+    },
+    {
+      "in_frame": 1434,
+      "out_frame": 1475,
+      "text": "Back into Washington."
+    },
+    {
+      "in_frame": 1479,
+      "out_frame": 1517,
+      "text": "Four border crossings,"
+    },
+    {
+      "in_frame": 1517,
+      "out_frame": 1554,
+      "text": "just to go to school"
+    },
+    {
+      "in_frame": 1554,
+      "out_frame": 1596,
+      "text": "in their own district."
+    }
+  ]
+}
