@@ -1,0 +1,150 @@
+{
+  "status": "blueprint_only",
+  "reference": "V4 revised choreography uses recorded V4 speech landmarks until the new closing take. No V5 voice or images have been rendered.",
+  "fps": 60,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "sample_rate": 48000,
+  "planned_duration_seconds_approx": 51,
+  "voice_identity": "voice-01",
+  "retained_vo": "V4 apart from the last whole sentence; match original persona and level",
+  "opening_camera_windows": [
+    {
+      "id": "road_swoop",
+      "in_frame_target": 0,
+      "out_frame_target_exclusive": 25
+    },
+    {
+      "id": "road_level_orbit",
+      "in_frame_target": 25,
+      "out_frame_target_exclusive": 75
+    },
+    {
+      "id": "side_profile_students",
+      "in_frame_target": 75,
+      "out_frame_target_exclusive": 123
+    },
+    {
+      "id": "registered_scale_climb",
+      "in_frame_target": 123,
+      "out_frame_target_exclusive": 180
+    },
+    {
+      "id": "regional_hook",
+      "in_frame_target": 180,
+      "out_frame_target_exclusive": 312
+    },
+    {
+      "id": "isolate_point_roberts",
+      "in_frame_target": 312,
+      "out_frame_target_exclusive": 391
+    },
+    {
+      "id": "isolate_blaine_high",
+      "in_frame_target": 391,
+      "out_frame_target_exclusive": 492
+    },
+    {
+      "id": "both_shores_return_to_frame",
+      "in_frame_target": 492,
+      "out_frame_target_exclusive": 571
+    }
+  ],
+  "unchanged_dialogue_landmarks": [
+    {
+      "cue": "hook_bus",
+      "v4_word_frame": 101,
+      "v4_audio_sample": 80800,
+      "v5_action": "clear bus side profile / students visible"
+    },
+    {
+      "cue": "canada",
+      "v4_word_frame": 180,
+      "v4_audio_sample": 144640,
+      "v5_action": "show receiving side in crimson-slate; no crossing"
+    },
+    {
+      "cue": "same",
+      "v4_word_frame": 261,
+      "v4_audio_sample": 208960,
+      "v5_action": "both Washington anchors visible; same jurisdiction labels"
+    },
+    {
+      "cue": "point",
+      "v4_word_frame": 312,
+      "v4_audio_sample": 249738,
+      "v5_action": "dolly toward exclave"
+    },
+    {
+      "cue": "here",
+      "v4_word_frame": 367,
+      "v4_audio_sample": 294378,
+      "v5_action": "hard cyan land-boundary core; fill clipped to exclave; Blaine outside frustum"
+    },
+    {
+      "cue": "blaine",
+      "v4_word_frame": 391,
+      "v4_audio_sample": 313098,
+      "v5_action": "begin eastward handoff"
+    },
+    {
+      "cue": "there",
+      "v4_word_frame": 483,
+      "v4_audio_sample": 386538,
+      "v5_action": "hard cobalt/periwinkle campus pin; exclave outside frustum"
+    },
+    {
+      "cue": "eleven",
+      "v4_word_frame": 521,
+      "v4_audio_sample": 417258,
+      "v5_action": "both shores in picture; distance tag on"
+    },
+    {
+      "cue": "across",
+      "v4_word_frame": 571,
+      "v4_audio_sample": 457578,
+      "v5_action": "draw red measured water span"
+    },
+    {
+      "cue": "no",
+      "v4_word_frame": 715,
+      "v4_audio_sample": 572298,
+      "v5_action": "red X and actual road comparison"
+    }
+  ],
+  "pending_closing_events": [
+    {
+      "anchor": "four",
+      "v5_audio_sample": null,
+      "v5_frame": null,
+      "action": "Resolve four crossings using the new narration onset"
+    },
+    {
+      "anchor": "standard",
+      "v5_audio_sample": null,
+      "v5_frame": null,
+      "action": "Move into matched opening street framing"
+    },
+    {
+      "anchor": "school",
+      "v5_audio_sample": null,
+      "v5_frame": null,
+      "action": "Hero bus in opening three-quarter setting"
+    },
+    {
+      "anchor": "bus",
+      "v5_audio_sample": null,
+      "v5_frame": null,
+      "action": "Resolve full caption and sentence; continue matched motion"
+    },
+    {
+      "anchor": "audible end of final /s/",
+      "v5_audio_sample": null,
+      "v5_frame": null,
+      "action": "Retain tail and align final picture to one motion step before frame zero"
+    }
+  ],
+  "route_timeline_reference": "Keep v4_master_cues.json for the preserved middle; reconform affected late events before rendering."
+}
