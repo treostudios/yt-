@@ -1,5 +1,9 @@
 # Point Roberts · final production handoff
 
+## V4 script and production blueprint
+
+- [Rewritten VO and shot-by-shot explainer](v4_shot_blueprint.md) · [60 fps cue sheet](v4_sync_cues.json). This is a new script and synchronization plan; V3 remains the latest rendered master.
+
 ## V3 master
 
 - [Final V3 Short](../final_short_v3.mp4) · [V3 scene-by-scene execution and provenance](v3_motion_and_source_notes.md) · [V3 thumbnail frame](../thumbnail_frame_v3.jpg). V3 uses direction-specific example driving geometry on real roads and a separate dashed shore-to-shore measurement. It does not claim the school's exact route or depict an active ferry. Rebuild with `python "$D/render_v2.py" --v3` using the shared setup below.

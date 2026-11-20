@@ -1,0 +1,470 @@
+{
+  "status": "unrecorded timing plan",
+  "duration_seconds": 53,
+  "duration_frames": 3180,
+  "fps": 60,
+  "resolution_px": [
+    1080,
+    1920
+  ],
+  "audio_sample_rate": 48000,
+  "narrator_identity": "voice-01",
+  "timing_status": "Target VO and picture frames only. Dialogue-onset samples and conformed frame numbers must be filled after the new voice is rendered. Windows have exclusive out points.",
+  "beats": [
+    {
+      "id": "opening",
+      "in_frame": 0,
+      "out_frame": 93,
+      "vo": "School bus. Via Canada."
+    },
+    {
+      "id": "washington_ends",
+      "in_frame": 93,
+      "out_frame": 219,
+      "vo": "Both ends are in Washington."
+    },
+    {
+      "id": "point_roberts",
+      "in_frame": 219,
+      "out_frame": 315,
+      "vo": "Point Roberts is right here."
+    },
+    {
+      "id": "blaine_high",
+      "in_frame": 315,
+      "out_frame": 423,
+      "vo": "Blaine High is right there."
+    },
+    {
+      "id": "shore_distance",
+      "in_frame": 423,
+      "out_frame": 573,
+      "vo": "Eleven miles across the bay."
+    },
+    {
+      "id": "no_bridge",
+      "in_frame": 573,
+      "out_frame": 765,
+      "vo": "Nice shortcut. Shame there’s no bridge."
+    },
+    {
+      "id": "peninsula",
+      "in_frame": 765,
+      "out_frame": 915,
+      "vo": "Why does Washington have a piece over here?"
+    },
+    {
+      "id": "treaty",
+      "in_frame": 915,
+      "out_frame": 1239,
+      "vo": "In 1846, the Oregon Treaty extended the border along the forty-ninth parallel."
+    },
+    {
+      "id": "american_tip",
+      "in_frame": 1239,
+      "out_frame": 1386,
+      "vo": "It put this tip in the U.S."
+    },
+    {
+      "id": "only_road",
+      "in_frame": 1386,
+      "out_frame": 1563,
+      "vo": "The only road out leads into Canada."
+    },
+    {
+      "id": "cross_one",
+      "in_frame": 1563,
+      "out_frame": 1698,
+      "vo": "So the bus crosses here,"
+    },
+    {
+      "id": "detour",
+      "in_frame": 1698,
+      "out_frame": 1845,
+      "vo": "loops around the bay,"
+    },
+    {
+      "id": "cross_two_and_arrival",
+      "in_frame": 1845,
+      "out_frame": 2100,
+      "vo": "and crosses back at Blaine. Then it pulls up to school."
+    },
+    {
+      "id": "countries_and_time",
+      "in_frame": 2100,
+      "out_frame": 2301,
+      "vo": "Two countries. About forty minutes."
+    },
+    {
+      "id": "algebra",
+      "in_frame": 2301,
+      "out_frame": 2439,
+      "vo": "And the prize is algebra."
+    },
+    {
+      "id": "return",
+      "in_frame": 2439,
+      "out_frame": 2871,
+      "vo": "After school? Canada again. Then Washington."
+    },
+    {
+      "id": "payoff_loop",
+      "in_frame": 2871,
+      "out_frame": 3180,
+      "vo": "Four border crossings. Same school district."
+    }
+  ],
+  "events": [
+    {
+      "target_frame": 0,
+      "vo_anchor": "School bus",
+      "anchor_id": "outbound_public_road",
+      "visual": "Bus already rolling; registered overview contextual locator",
+      "sound": "rolling bed",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 69,
+      "vo_anchor": "Canada",
+      "anchor_id": "canada_side_of_boundary_bay",
+      "visual": "Teal receiving-side accent; no crossing count",
+      "sound": "intro tone",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 111,
+      "vo_anchor": "Both ends",
+      "anchor_id": "point_roberts_and_school",
+      "visual": "Bring both endpoint anchors into frame",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 181,
+      "vo_anchor": "Washington",
+      "anchor_id": "point_roberts_and_school",
+      "visual": "Same-frame paired ochre pulses",
+      "sound": "paired tone",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 231,
+      "vo_anchor": "Point Roberts",
+      "anchor_id": "point_roberts_anchor",
+      "visual": "Lead camera to named anchor, retain both ends if possible",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 279,
+      "vo_anchor": "here",
+      "anchor_id": "point_roberts_anchor_and_ibc_land_segment",
+      "visual": "Instant outline core and geographic pulse",
+      "sound": "world click",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 321,
+      "vo_anchor": "Blaine High",
+      "anchor_id": "blaine_high_campus",
+      "visual": "Transfer framing east while preserving the origin",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 382,
+      "vo_anchor": "there",
+      "anchor_id": "blaine_high_campus",
+      "visual": "Instant campus-specific ring and short leader",
+      "sound": "higher world click",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 428,
+      "vo_anchor": "Eleven",
+      "anchor_id": "shore_endpoints",
+      "visual": "Show the completed rounded distance",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 472,
+      "vo_anchor": "across",
+      "anchor_id": "shore_measurement",
+      "visual": "Sweep cyan dashes across measured water line",
+      "sound": "fine measurement ticks",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 605,
+      "vo_anchor": "shortcut",
+      "anchor_id": "shore_measurement",
+      "visual": "Finish dashed measurement to shore",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 696,
+      "vo_anchor": "no",
+      "anchor_id": "shore_measurement",
+      "visual": "Red dashed cross-out; light real road casing around bay",
+      "sound": "dry strike",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 854,
+      "vo_anchor": "piece",
+      "anchor_id": "point_roberts_south_polygon",
+      "visual": "Trace the exact land polygon perimeter",
+      "sound": "small outline pass",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 892,
+      "vo_anchor": "here",
+      "anchor_id": "point_roberts_south_polygon",
+      "visual": "Fill the traced polygon on the cue",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 949,
+      "vo_anchor": "1846",
+      "anchor_id": "ibc_land_trace_origin",
+      "visual": "Year tag anchors to eastern trace origin",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1023,
+      "vo_anchor": "Oregon Treaty",
+      "anchor_id": "ibc_land_trace_origin",
+      "visual": "Show treaty label adjacent to land line",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1094,
+      "vo_anchor": "extended",
+      "anchor_id": "ibc_land_segment",
+      "visual": "Draw directional neon core over sampled land boundary",
+      "sound": "light line texture",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1186,
+      "vo_anchor": "forty-ninth",
+      "anchor_id": "historical_latitude_annotation",
+      "visual": "Attach 49° N reference without drawing a line over water",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1285,
+      "vo_anchor": "tip",
+      "anchor_id": "point_roberts_south_polygon",
+      "visual": "Southward fill under local coastline",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1344,
+      "vo_anchor": "U.S.",
+      "anchor_id": "point_roberts_south_polygon",
+      "visual": "Match Washington palette on word impact",
+      "sound": "low confirming tone",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1417,
+      "vo_anchor": "only road",
+      "anchor_id": "tyee_drive_56_street",
+      "visual": "Reveal only connected public land approach; a brief illustrative braking hold",
+      "sound": "tire deceleration",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1512,
+      "vo_anchor": "Canada",
+      "anchor_id": "boundary_bay_receiving_side",
+      "visual": "Dock teal label across boundary; still no count",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1640,
+      "vo_anchor": "here",
+      "anchor_id": "boundary_bay_outbound_intersection",
+      "visual": "Axle intersection + boundary pulse + badge 01",
+      "sound": "crossing tick 1",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1701,
+      "vo_anchor": "loops",
+      "anchor_id": "example_eastbound_corridor",
+      "visual": "Axle follows actual road bends as the view rises",
+      "sound": "restrained widen whoosh",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 1931,
+      "vo_anchor": "Blaine",
+      "anchor_id": "pacific_highway_outbound_example_intersection",
+      "visual": "Axle intersection + border flare + badge 02",
+      "sound": "crossing tick 2",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2055,
+      "vo_anchor": "school",
+      "anchor_id": "blaine_high_campus",
+      "visual": "Separate campus pulse timed to bus arrival on mapped public road",
+      "sound": "rolling tail",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2135,
+      "vo_anchor": "countries",
+      "anchor_id": "outbound_visited_geometry",
+      "visual": "Road colors distinguish the countries at actual boundary intersections",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2234,
+      "vo_anchor": "forty",
+      "anchor_id": "blaine_high_campus",
+      "visual": "Read ≈40 MIN on marker-driven school clock",
+      "sound": "clock settle",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2329,
+      "vo_anchor": "prize",
+      "anchor_id": "blaine_high_campus",
+      "visual": "Unfold award card from school pin",
+      "sound": "quiet paper motion",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2373,
+      "vo_anchor": "algebra",
+      "anchor_id": "blaine_high_campus",
+      "visual": "Immediate award-face flip to SOLVE FOR x, then hold",
+      "sound": "single paper click",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2447,
+      "vo_anchor": "After school",
+      "anchor_id": "blaine_high_campus",
+      "visual": "Bell releases vehicle onto independently routed return leg",
+      "sound": "bell partial",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2522,
+      "vo_anchor": "Canada",
+      "anchor_id": "pacific_highway_homebound_example_intersection",
+      "visual": "Axle intersection + border flare + badge 03",
+      "sound": "crossing tick 3",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2785,
+      "vo_anchor": "Washington",
+      "anchor_id": "boundary_bay_homebound_intersection",
+      "visual": "Axle intersection + border flare + badge 04",
+      "sound": "crossing tick 4",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 2891,
+      "vo_anchor": "Four",
+      "anchor_id": "two_port_anchors",
+      "visual": "Combine four hits into one count",
+      "sound": "payoff tone, not another tick",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 3051,
+      "vo_anchor": "district",
+      "anchor_id": "point_roberts_and_school",
+      "visual": "Match district labels; no filled district across Canada",
+      "sound": null,
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    },
+    {
+      "target_frame": 3124,
+      "vo_anchor": "[no additional words]",
+      "anchor_id": "opening_road_locator",
+      "visual": "Clear sum and return to opening pose/motion; wrap bed",
+      "sound": "ambient wrap",
+      "vo_onset_sample_after_recording": null,
+      "conformed_frame": null
+    }
+  ],
+  "crossings": [
+    {
+      "count": 1,
+      "from": "US",
+      "to": "CA",
+      "target_frame": 1640
+    },
+    {
+      "count": 2,
+      "from": "CA",
+      "to": "US",
+      "target_frame": 1931
+    },
+    {
+      "count": 3,
+      "from": "US",
+      "to": "CA",
+      "target_frame": 2522
+    },
+    {
+      "count": 4,
+      "from": "CA",
+      "to": "US",
+      "target_frame": 2785
+    }
+  ],
+  "spoken_word_count_whitespace": 106
+}
