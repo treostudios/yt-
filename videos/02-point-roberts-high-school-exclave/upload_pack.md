@@ -1,6 +1,6 @@
 # 02 · Upload pack
 
-**Publishing the finished Short? Start with the [final YouTube publish checklist](publish_checklist.md).** The notes below also preserve earlier-version options.
+**Publishing the finished Short? Use the [latest viewer-facing upload copy](shorts_upload_copy.md).** The [earlier checklist](publish_checklist.md) is archived for production reference. The notes below also preserve earlier-version options.
 
 **For the final 50.35-second upload:** Use the [credited upload copy](final_short_publish.mp4), [captions](final_captions_v5.srt), and [thumbnail reference](thumbnail_frame_final.jpg). Keep the route disclosure and full data credits in the description. The [clean master](final_short_master.mp4) is for editorial use.
 
